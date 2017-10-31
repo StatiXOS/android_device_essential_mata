@@ -43,6 +43,10 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     libbase_shim
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    device/essential/mata/keylayout/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
