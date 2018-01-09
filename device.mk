@@ -52,6 +52,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     device/essential/mata
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
