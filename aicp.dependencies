@@ -8,5 +8,9 @@
     "repository": "LineageOS/android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings",
     "branch": "lineage-15.1"
+  },
+    "repository": "xlxfoxxlx/kronicgapps",
+    "target_path": "vendor/kronicgapps",
+    "branch": "oreo-mr1"
   }
 ]
