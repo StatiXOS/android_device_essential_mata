@@ -103,6 +103,9 @@ USE_CAMERA_STUB := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # Display
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
