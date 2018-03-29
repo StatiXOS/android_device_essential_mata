@@ -4,8 +4,8 @@
     "target_path": "kernel/essential/msm8998"
   },
   {
-    "repository": "vendor_essential_mata",
-    "target_path": "vendor/essential/mata"
+    "repository": "vendor_essential",
+    "target_path": "vendor/essential"
   },
   {
     "repository": "xlxfoxxlx/kronicgapps",
