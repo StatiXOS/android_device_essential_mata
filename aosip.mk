@@ -18,6 +18,9 @@ else
 TARGET_RECOVERY_FSTAB := device/essential/mata/rootdir/etc/fstab.mata
 endif
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+DEVICE_MAINTAINERS="Josh Fox(XlxFoXxlX)"
+
 # Device identifiers
 PRODUCT_DEVICE := mata
 PRODUCT_NAME := aosip_mata
