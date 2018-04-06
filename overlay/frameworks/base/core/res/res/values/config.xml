@@ -386,4 +386,7 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">64</integer>
 
+    <!-- Enable grip mode adjustments for IME -->
+    <bool name="config_needsIMEGripAdjust">true</bool>
+
 </resources>
