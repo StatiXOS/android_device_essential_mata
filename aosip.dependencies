@@ -8,6 +8,10 @@
     "target_path": "vendor/essential"
   },
   {
+    "repository" : "device_oppo_common",
+    "target_path": "device/oppo/common"
+  },
+  {
     "repository": "xlxfoxxlx/kronicgapps",
     "target_path": "vendor/kronicgapps",
     "branch": "oreo-mr1"
