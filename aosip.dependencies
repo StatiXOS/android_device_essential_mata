@@ -12,8 +12,8 @@
     "target_path": "device/oppo/common"
   },
   {
-    "repository": "xlxfoxxlx/kronicgapps",
+    "repository": "platform_vendor_gapps",
     "target_path": "vendor/kronicgapps",
-    "branch": "oreo-mr1"
+    "remote": "aosip"
   }
 ]
