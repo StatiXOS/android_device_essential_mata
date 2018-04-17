@@ -8,9 +8,9 @@
     "target_path": "vendor/essential"
   },
   {
-    "repository" : "android_packages_resources_devicesettings",
+    "repository" : "LineageOS/android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings",
-    "remote": "aosip"
+    "branch": "lineage-15.1"
   },
   {
     "repository": "platform_vendor_gapps",
