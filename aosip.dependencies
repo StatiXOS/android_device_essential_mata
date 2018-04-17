@@ -8,8 +8,9 @@
     "target_path": "vendor/essential"
   },
   {
-    "repository" : "device_oppo_common",
-    "target_path": "device/oppo/common"
+    "repository" : "android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "remote": "aosip"
   },
   {
     "repository": "platform_vendor_gapps",
