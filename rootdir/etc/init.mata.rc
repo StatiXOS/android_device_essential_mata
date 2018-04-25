@@ -176,6 +176,9 @@ on post-fs
     # Wait qseecomd started
     wait_for_prop sys.listeners.registered true
 
+    # Disable sched autogroup
+    write /proc/sys/kernel/sched_autogroup_enabled 0
+
 on late-fs
     # Start devices by sysfs trigger
     start vendor.devstart_sh
