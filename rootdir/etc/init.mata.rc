@@ -599,6 +599,9 @@ on property:sys.boot_completed=1
 
     start vendor.qcom-post-boot
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 on property:vendor.usb.config=*
    start usbd
 
