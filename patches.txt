@@ -1,0 +1,2 @@
+67313  http://gerrit.aicp-rom.com prebuilts/clang/host/linux-x86
+
