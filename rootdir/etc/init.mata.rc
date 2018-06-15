@@ -221,6 +221,11 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
+    # Create PERFD deamon related dirs
+    mkdir /data/vendor/perfd 0770 root system
+    chmod 2770 /data/vendor/perfd
+    rm /data/vendor/perfd/default_values
+
     # NFC local data and nfcee xml storage
     mkdir /data/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
@@ -738,8 +743,6 @@ service qcom-power /vendor/bin/init.qcom.power.sh
     oneshot
 
 # qcom-power triggers this property
-on property:sys.post_boot.parsed=1
-
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
