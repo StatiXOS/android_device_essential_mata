@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2013-2017, The Linux Foundation. All rights reserved.
+Copyright (c) 2013-2018, The Linux Foundation. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
@@ -537,7 +537,7 @@ void IPACM_Lan::event_callback(ipa_cm_event_id event, void *param)
 			IPACMERR("IPA_HANDLE_WAN_UP_TETHER tether_if(%d), not valid (%d) ignore\n", data_wan_tether->if_index_tether, ipa_if_num);
 			return;
 		}
-#else /* not offload rndis on WIFI mode on MSM targets sky*/
+#else /* not offload rndis on WIFI mode on MSM targets */
 		if (data_wan_tether->is_sta)
 		{
 			IPACMERR("Not support RNDIS offload on WIFI mode, dun install UL filter rules for WIFI mode\n");
@@ -2916,8 +2916,10 @@ int IPACM_Lan::handle_down_evt()
 		IPACMDBG_H("LAN IF goes down, backhaul type %d\n", IPACM_Wan::backhaul_is_sta_mode);
 		handle_wan_down(IPACM_Wan::backhaul_is_sta_mode);
 #ifdef FEATURE_IPA_ANDROID
+#ifndef FEATURE_IPACM_HAL
 		/* Clean-up tethered-iface list */
 		IPACM_Wan::delete_tether_iface(IPA_IP_v4, ipa_if_num);
+#endif
 #endif
 	}
 
