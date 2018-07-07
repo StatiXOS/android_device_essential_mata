@@ -448,3 +448,7 @@ PRODUCT_PACKAGES += \
     wificond \
     wpa_supplicant \
     wpa_supplicant.conf
+
+#QTIAudio
+PRODUCT_PACKAGES += \
+    QtiAudio
