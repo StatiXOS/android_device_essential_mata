@@ -23,5 +23,10 @@
     "repository":  "MindTheGapps/vendor_gapps",
     "target_path": "vendor/gapps",
     "branch":      "master"
+  },
+  {
+    "repository":  "ThankYouMario/proprietary_vendor_qcom_sdclang-6.0_linux-x86",
+    "target_path": "prebuilts/clang/host/linux-x86/sdclang-6.0",
+    "branch":      "oreo-mr1"
   }
 ]
