@@ -1,10 +1,10 @@
 67313  http://gerrit.aicp-rom.com prebuilts/clang/host/linux-x86
-69491  http://gerrit.aicp-rom.com/c/AICP/frameworks_native
-70421  http://gerrit.aicp-rom.com/c/AICP/build
-70424  http://gerrit.aicp-rom.com/c/AICP/frameworks_av
-70427  http://gerrit.aicp-rom.com/c/AICP/frameworks_native
-219760 https://review.lineageos.org/c/LineageOS/android_system_nfc
-219761 https://review.lineageos.org/c/LineageOS/android_external_gptfdisk
-219762 https://review.lineageos.org/c/LineageOS/android_external_libtar
-219763 https://review.lineageos.org/c/LineageOS/android_hardware_qcom_display
-219764 https://review.lineageos.org/c/LineageOS/android_hardware_qcom_media
+69491  http://gerrit.aicp-rom.com frameworks/native
+70427  http://gerrit.aicp-rom.com frameworks/native
+70424  http://gerrit.aicp-rom.com frameworks/av
+70421  http://gerrit.aicp-rom.com build
+219760 https://review.lineageos.org system/nfc
+219761 https://review.lineageos.org external/gptfdisk
+219762 https://review.lineageos.org external/libtar
+220543 https://review.lineageos.org hardware/qcom/display-caf/msm8998
+220559 https://review.lineageos.org hardware/qcom/media-caf/msm8998
