@@ -1,6 +1,6 @@
-    # Inherit some common aosip stuff.
+# Inherit some common statix stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/gzosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/statix/config/common.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -20,7 +20,7 @@ endif
 
 # Device identifiers
 PRODUCT_DEVICE := mata
-PRODUCT_NAME := gzosp_mata
+PRODUCT_NAME := statix_mata
 PRODUCT_BRAND := essential
 PRODUCT_MODEL := PH-1
 PRODUCT_MANUFACTURER := Essential Products
@@ -28,6 +28,5 @@ PRODUCT_RELEASE_NAME := mata
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
         PRODUCT_NAME=mata \
-        PRIVATE_BUILD_DESC="mata-user 8.1.0 OPM1.180104.267 399 release-keys"
-
-BUILD_FINGERPRINT := essential/mata/mata:8.1.0/OPM1.180104.267/399:user/release-keys
+        PRIVATE_BUILD_DESC="mata-user 8.1.0 OPM1.180104.267 399 release-keys" \
+	BUILD_FINGERPRINT="essential/mata/mata:8.1.0/OPM1.180104.267/399:user/release-keys"
