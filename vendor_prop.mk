@@ -44,6 +44,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.aux.packagelist="com.essential.klik,com.google.android.GoogleCamera" \
     persist.camera.expose.aux=1 \
+    persist.camera.is_type=4 \
+    persist.camera.is_mode=4 \
+    persist.camera.eis.enable=1 \
     persist.camera.max.previewfps=60 \
     vidc.enc.dcvs.extra-buff-count=2
 
