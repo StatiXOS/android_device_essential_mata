@@ -155,19 +155,6 @@ TARGET_KERNEL_CLANG_VERSION := 7.0.0-DragonTC-20180715
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# LLVM
-TARGET_USE_SDCLANG := true
-
-ifneq ($(HOST_OS),darwin)
-
-SDCLANG := true
-
-SDCLANG_PATH := prebuilts/clang/host/linux-x86/sdclang-6.0/bin
-
-SDCLANG_LTO_DEFS := vendor/aicp/build/core/sdllvm-lto-defs.mk
-
-endif
-
 # NFC
 BOARD_NFC_CHIPSET := pn548
 BOARD_NFC_HAL_SUFFIX := $(TARGET_BOARD_PLATFORM)
