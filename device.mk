@@ -426,10 +426,6 @@ PRODUCT_PACKAGES += \
     libicuuc.vendor \
     vndk_package
 
-# Weaver
-PRODUCT_PACKAGES += \
-    android.hardware.weaver@1.0
-
 # Wifi
 PRODUCT_COPY_FILES += \
     device/essential/mata/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
