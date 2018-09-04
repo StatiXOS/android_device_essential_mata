@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+TARGET_BOOT_ANIMATION_RES := 1440
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/essential/mata/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := \
