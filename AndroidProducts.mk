@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES += \
-    device/essential/mata/aosp_mata.mk
+    device/essential/mata/aosip.mk
