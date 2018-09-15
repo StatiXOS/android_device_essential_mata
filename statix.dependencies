@@ -1,0 +1,12 @@
+[
+ {
+   "repository": "StatiXOS/android_kernel_essential_msm8998",
+   "target_path": "kernel/essential/msm8998",
+   "branch": "9-caf"
+ },
+ {
+   "repository": "StatiXOS/android_vendor_essential",
+   "target_path": "vendor/essential",
+   "branch": "9-caf"
+ }
+]
