@@ -103,10 +103,10 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     libcutils
 
 # Bluetooth
-#PRODUCT_PACKAGES += \
-#    android.hardware.bluetooth@1.0-impl \
-#    android.hardware.bluetooth@1.0-service \
-#    libbt-vendor
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
+    libbt-vendor
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -260,15 +260,15 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # NFC
-#PRODUCT_PACKAGES += \
-#    android.hardware.nfc@1.1-service \
-#    com.android.nfc_extras \
-#    NfcNci \
-#    Tag
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.1-service \
+    com.android.nfc_extras \
+    NfcNci \
+    Tag
 
-#PRODUCT_COPY_FILES += \
-#    device/essential/mata/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
-#    device/essential/mata/configs/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+PRODUCT_COPY_FILES += \
+    device/essential/mata/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
+    device/essential/mata/configs/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
 # OMX
 PRODUCT_PACKAGES += \
