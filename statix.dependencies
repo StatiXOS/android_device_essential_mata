@@ -8,5 +8,15 @@
    "repository": "StatiXOS/android_vendor_essential",
    "target_path": "vendor/essential",
    "branch": "9-caf"
+ },
+ {
+   "repository": "LineageOS/android_packages_resources_devicesettings",
+   "target_path": "packages/resources/devicesettings",
+   "branch": "lineage-16.0"
+ },
+ {
+   "repository":  "celtare21/dragontc-7.0",
+   "target_path": "prebuilts/clang/host/linux-x86/dtc-7.0",
+   "branch":      "dragontc"
  }
 ]
