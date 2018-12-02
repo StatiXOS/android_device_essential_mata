@@ -135,10 +135,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m
 
-# Device settings
-PRODUCT_PACKAGES += \
-    DeviceSettings
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
@@ -176,6 +172,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
+
+# GApps
+$(call inherit-product-if-exists, vendor/gapps/inline.mk)
 
 # HDR
 PRODUCT_COPY_FILES += \
