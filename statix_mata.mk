@@ -32,3 +32,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
         PRIVATE_BUILD_DESC="mata-user 9 PPR1.181005.099 413 release-keys"
 
 BUILD_FINGERPRINT := essential/mata/mata:9/PPR1.181005.099/413:user/release-keys
+
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
