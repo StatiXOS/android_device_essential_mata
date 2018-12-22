@@ -145,6 +145,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/essential/msm8998
 TARGET_KERNEL_CONFIG := electric_mata_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
+export CROSS_COMPILE_ARM32 = prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
