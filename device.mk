@@ -67,7 +67,8 @@ PRODUCT_PACKAGES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    device/essential/mata/permissions/privapp-permissions-mata.xml:system/etc/permissions/privapp-permissions-mata.xml
+    device/essential/mata/permissions/privapp-permissions-mata.xml:system/etc/permissions/privapp-permissions-mata.xml \
+    device/essential/mata/permissions/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -112,3 +113,12 @@ $(call inherit-product, build/target/product/verity.mk)
 # VNDK
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_TARGET_VNDK_VERSION := 29
+
+# Wifi Display
+PRODUCT_PACKAGES += \
+    libaacwrapper \
+    libmediaextractorservice \
+    libnl
+
+PRODUCT_BOOT_JARS += \
+   WfdCommon
