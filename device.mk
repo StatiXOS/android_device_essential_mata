@@ -200,3 +200,12 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_COPY_FILES += \
     device/essential/mata/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/wifi/wpa_supplicant_overlay.conf
+
+# Wifi Display
+PRODUCT_PACKAGES += \
+    libaacwrapper \
+    libmediaextractorservice \
+    libnl
+
+PRODUCT_BOOT_JARS += \
+   WfdCommon
