@@ -14,4 +14,7 @@
 <resources>
     <!-- Whether system_update_settings should be shown or not. -->
     <bool name="config_show_system_update_settings">false</bool>
+
+    <!-- Whether to show Connected MAC Randomization in Developer Options. -->
+    <bool name="config_wifi_support_connected_mac_randomization">true</bool>
 </resources>
