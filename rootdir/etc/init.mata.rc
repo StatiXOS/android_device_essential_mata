@@ -397,6 +397,8 @@ on boot
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
     chown wifi wifi /sys/kernel/boot_wlan/boot_wlan
+    chmod 0660 /sys/module/wlan/parameters/fwpath
+    chmod 0660 /sys/kernel/boot_wlan/boot_wlan
 
     setprop ro.telephony.call_ring.multiple false
 
