@@ -119,10 +119,6 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap
 
-# Device settings
-PRODUCT_PACKAGES += \
-    DeviceSettings
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
