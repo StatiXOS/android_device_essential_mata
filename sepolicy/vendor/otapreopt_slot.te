@@ -1,0 +1,1 @@
+allow otapreopt_slot self:capability sys_admin;

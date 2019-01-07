@@ -1,0 +1,2 @@
+allow untrusted_app_27 proc_zoneinfo:file { getattr open read };
+allow untrusted_app_27 vendor_default_prop:file { getattr open read };
