@@ -1,0 +1,2 @@
+allow untrusted_app camera_prop:file { getattr open read };
+allow untrusted_app vendor_camera_prop:file { getattr open };

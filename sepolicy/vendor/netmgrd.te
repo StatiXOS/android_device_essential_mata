@@ -1,3 +1,2 @@
-allow netmgrd netmgr_data_file:dir rw_dir_perms;
-allow netmgrd netmgr_data_file:file create_file_perms;
+allow netmgrd self:capability sys_admin;
 set_prop(netmgrd, vendor_xlat_prop)
