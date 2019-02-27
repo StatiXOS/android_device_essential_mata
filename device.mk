@@ -105,8 +105,8 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl:64 \
-    android.hardware.bluetooth@1.0-service \
+    android.hardware.bluetooth@1.0-impl-mata:64 \
+    android.hardware.bluetooth@1.0-service.mata \
     libbt-vendor
 
 # Camera
