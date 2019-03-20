@@ -13,11 +13,11 @@
 /dev/block/bootdevice/by-name/userdata   /data              ext4   noatime,nosuid,nodev,barrier=1,noauto_da_alloc   latemount,wait,check,formattable,fileencryption=ice,quota
 /dev/block/bootdevice/by-name/userdata   /data              f2fs   noatime,nosuid,nodev,nodiratime,discard,fsync_mode=nobarrier,inline_xattr,inline_data,data_flush   latemount,wait,check,formattable,encryptable=footer,length=-16384,quota
 
-/dev/block/bootdevice/by-name/bluetooth  /bt_firmware       vfat   ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait,slotselect
-/dev/block/bootdevice/by-name/dsp        /dsp               ext4   ro,nosuid,nodev,barrier=1,context=u:object_r:adsprpcd_file:s0 wait,slotselect
+/dev/block/bootdevice/by-name/bluetooth  /vendor/bt_firmware       vfat   ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait,slotselect
+/dev/block/bootdevice/by-name/dsp        /vendor/dsp               ext4   ro,nosuid,nodev,barrier=1,context=u:object_r:adsprpcd_file:s0 wait,slotselect
 /dev/block/bootdevice/by-name/misc       /misc              emmc   defaults                                         defaults
-/dev/block/bootdevice/by-name/modem      /firmware          vfat   ro,shortname=lower,uid=1000,gid=1000,dmask=222,fmask=333,context=u:object_r:firmware_file:s0 wait,slotselect
-/dev/block/bootdevice/by-name/persist    /persist           ext4   noatime,nosuid,nodev,barrier=1                   wait
+/dev/block/bootdevice/by-name/modem      /vendor/firmware_mnt          vfat   ro,shortname=lower,uid=1000,gid=1000,dmask=222,fmask=333,context=u:object_r:firmware_file:s0 wait,slotselect
+/dev/block/bootdevice/by-name/persist    /mnt/vendor/persist           ext4   noatime,nosuid,nodev,barrier=1                   wait
 
 /devices/*/xhci-hcd.0.auto*              auto               auto   defaults                                         voldmanaged=usb:auto
 /devices/*/0000:01:00.0*                 auto               auto   defaults                                         voldmanaged=usb:auto
