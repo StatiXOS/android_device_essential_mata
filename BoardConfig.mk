@@ -189,7 +189,11 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 TARGET_RECOVERY_UI_MARGIN_WIDTH := 64
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /mnt/vendor/persist:/persist \
+    /vendor/bt_firmware:/bt_firmware \
+    /vendor/dsp:/dsp \
+    /vendor/firmware_mnt:/firmware
 
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2019-02-05
