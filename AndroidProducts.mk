@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES += \
-    device/essential/mata/statix_mata.mk
+    device/essential/mata/carbon_mata.mk
