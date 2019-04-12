@@ -597,9 +597,6 @@ on property:sys.boot_completed=1
     # Set the default IRQ affinity to the silver cluster.
     write /proc/irq/default_smp_affinity f
 
-    # Enable PowerHAL hint processing
-    setprop vendor.powerhal.init 1
-
     start vendor.qcom-post-boot
 
 on property:vendor.usb.config=*
