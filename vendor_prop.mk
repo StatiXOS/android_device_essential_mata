@@ -123,6 +123,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.multishake=true \
     ro.qti.sensors.sta_detect=true
 
+# SurfaceFlinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.protected_contents=true
+
 # Time daemon
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.delta_time.enable=true
