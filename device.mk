@@ -31,6 +31,14 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl.recovery:64 \
+    bootctrl.msm8998.recovery
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
 # IMS
 PRODUCT_PACKAGES += \
     libbase_shim
