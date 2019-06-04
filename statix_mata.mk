@@ -33,4 +33,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := essential/mata/mata:9/PQ1A.190105.077/515:user/release-keys
 
-$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
