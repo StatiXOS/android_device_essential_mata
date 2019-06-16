@@ -118,11 +118,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.delta_time.enable=true
 
-# Touch
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.grip.status=off \
-    vendor.touch.smoothness=5
-
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config.extra=none
