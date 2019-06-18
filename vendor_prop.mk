@@ -101,6 +101,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.videopause.mode=1 \
     persist.radio.sap_silent_pin=1 \
     persist.radio.always_send_plmn=true \
+    persist.dbg.ims_volte_enable=1\
+    persist.dbg.volte_avail_ovr=1\
+    persist.dbg.vt_avail_ovr=0\
+    persist.data.iwlan.enable=true\
+    persist.dbg.wfc_avail_ovr=0\
     persist.dbg.ims_volte_enable=1
 
 
@@ -117,6 +122,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Time daemon
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.delta_time.enable=true
+
+# Touch
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.grip.status=off \
+    vendor.touch.smoothness=5
 
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
