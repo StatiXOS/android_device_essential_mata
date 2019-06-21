@@ -101,6 +101,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.videopause.mode=1 \
     persist.radio.sap_silent_pin=1 \
     persist.radio.always_send_plmn=true \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=0 \
+    persist.data.iwlan.enable=true \
+    persist.dbg.wfc_avail_ovr=1 \
     persist.dbg.ims_volte_enable=1
 
 
