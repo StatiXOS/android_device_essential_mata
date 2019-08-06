@@ -198,7 +198,13 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/firmware_mnt:/firmware
 
 # Security Patch Level
-VENDOR_SECURITY_PATCH := 2019-04-05
+VENDOR_SECURITY_PATCH := 2019-08-05
+
+# BAD BAD BAD - Remove this one next month. Google rolled-back the
+# platform-tagged patch level at the last moment to 2019-08-01, but
+# our fingerprint was registered against -05. #BlameGoogle
+PLATFORM_SECURITY_PATCH := 2019-08-05
+
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
