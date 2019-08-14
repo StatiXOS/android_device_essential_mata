@@ -338,6 +338,9 @@ on post-fs-data
     chmod 0660 /data/vendor/radio/db_check_done
 
     # Set aggressive read ahead for dm-0 and dm-1 during boot up
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/nr_requests 256
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048
 
