@@ -4323,7 +4323,7 @@ case "$target" in
 		"292") #msm8998 apq8098_latv
 		# Start Host based Touch processing
 		case "$hw_platform" in
-		"QRD")
+		"Mata")
 			case "$platform_subtype_id" in
 				"0")
 					start_hbtp
