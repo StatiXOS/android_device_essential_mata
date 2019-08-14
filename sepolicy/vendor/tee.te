@@ -9,4 +9,3 @@ allow tee fingerprintd_data_file:dir rw_dir_perms;
 allow tee fingerprintd_data_file:file create_file_perms;
 
 set_prop(tee, tee_listener_prop)
-set_prop(tee, system_prop)
