@@ -274,7 +274,6 @@ on post-fs-data
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048
 
-    start vendor.ril-daemon
     start vendor.ipacm
     start vendor.qti
     start vendor.netmgrd
@@ -291,8 +290,13 @@ on post-fs-data
     mkdir /tombstones/dsps 0771 system system
     mkdir /data/vendor/hbtp 0750 system system
 
-    # make it so that system can read /proc/cmdline
-    chmod 666 /proc/cmdline
+    # Setup permission for powerHAL
+    chown system system /dev/stune/top-app/schedtune.boost
+    chown system system /dev/cpu_dma_latency
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chown system system /sys/class/devfreq/soc:qcom,gpubw/min_freq
+    chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/min_freq
 
 on early-boot
     # wait for devices
@@ -586,7 +590,6 @@ on property:vold.decrypt=trigger_restart_framework
     start vendor.qti
     start vendor.netmgrd
     start vendor.wcnss-service
-    start vendor.ril-daemon
 
 # Services begin here
 

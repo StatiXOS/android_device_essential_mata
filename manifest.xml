@@ -206,6 +206,15 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.radio.deprecated</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOemHook</name>
+            <instance>slot1</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.renderscript</name>
         <transport arch="32+64">passthrough</transport>
         <version>1.0</version>
@@ -445,15 +454,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.radio.lpa</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IUimLpa</name>
-            <instance>UimLpa0</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -463,30 +463,21 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.radio.uim_remote_client</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IUimRemoteServiceClient</name>
-            <instance>uimRemoteClient0</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.radio.uim_remote_server</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IUimRemoteServiceServer</name>
-            <instance>uimRemoteServer0</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IRTPService</name>
             <instance>imsrtpservice</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lineage.livedisplay</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IColor</name>
+            <instance>default</instance>
         </interface>
     </hal>
 </manifest>
