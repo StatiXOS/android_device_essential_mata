@@ -165,6 +165,9 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_CLANG_VERSION := 9.0.3
 
+# Lawnchair
+LAWNCHAIR_OPTOUT := true
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
@@ -204,8 +207,8 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/temp
 
 # Timeservice
 BOARD_USES_QC_TIME_SERVICES := true

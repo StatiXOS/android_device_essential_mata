@@ -1,0 +1,11 @@
+type hal_sidecar_essential_default, domain;
+hal_server_domain(hal_sidecar_essential_default, hal_sidecar_essential)
+
+type hal_sidecar_essential_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_sidecar_essential_default)
+
+add_hwservice(hal_sidecar_essential_server, hal_sidecar_essential_hwservice)
+allow hal_sidecar_essential_client hal_sidecar_essential_hwservice:hwservice_manager find;
+
+allow hal_sidecar_essential_default sidecar_file:dir r_dir_perms;
+allow hal_sidecar_essential_default sidecar_file:{ chr_file file } rw_file_perms;

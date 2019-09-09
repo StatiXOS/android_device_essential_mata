@@ -1,0 +1,12 @@
+type audio_vendor_data_file, file_type, data_file_type;
+type debugfs_rmts, debugfs_type, fs_type;
+type debugfs_wlan, debugfs_type, fs_type;
+type neko_device, dev_type, file_type;
+type netmgr_data_file, file_type, data_file_type, core_data_file_type;
+type proc_sensordata, fs_type, proc_type;
+type sidecar_file, fs_type, sysfs_type;
+type sysfs_input, sysfs_type, fs_type;
+type sysfs_fingerprint, sysfs_type, fs_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;
+type sysfs_scsi_devices_0000, sysfs_type, fs_type;
+type sysfs_wifi, sysfs_type, fs_type;
