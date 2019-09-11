@@ -451,9 +451,13 @@ vendor/lib64/libssd.so
 vendor/lib64/libtzdrmgenprov.so
 
 # DRM - Widevine
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
 vendor/lib64/libwvhidl.so
+
+# DRM - Clearkey
+vendor/bin/hw/android.hardware.drm@1.2-service.clearkey
+vendor/etc/init/android.hardware.drm@1.2-service.clearkey.rc
 
 # DSP
 vendor/etc/scve/facereco/gModel.dat
