@@ -1,6 +1,7 @@
-# Inherit some common potato stuff.
+# Inherit some common statix stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/potato/config/common_full_phone.mk)
+$(call inherit-product, vendor/statix/config/common.mk)
+$(call inherit-product, vendor/statix/config/gsm.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -26,7 +27,7 @@ endif
 
 # Device identifiers
 PRODUCT_DEVICE := mata
-PRODUCT_NAME := potato_mata
+PRODUCT_NAME := statix_mata
 PRODUCT_BRAND := essential
 PRODUCT_MODEL := PH-1
 PRODUCT_MANUFACTURER := Essential Products
