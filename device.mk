@@ -423,3 +423,6 @@ PRODUCT_PACKAGES += \
     libwifi-hal-qcom \
     wpa_supplicant \
     wpa_supplicant.conf
+
+PRODUCT_ACTIONABLE_COMPATIBLE_PROPERTY_DISABLE := true
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
