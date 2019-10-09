@@ -1,4 +1,4 @@
-#
+'#
 # Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -110,7 +110,7 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl-mata:64 \
-    android.hardware.bluetooth@1.0-service.mata \
+    android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
 # Camera
