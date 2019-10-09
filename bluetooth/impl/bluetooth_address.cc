@@ -34,6 +34,7 @@ namespace V1_0 {
 namespace implementation {
 
 bool BluetoothAddress::get_local_address(uint8_t* local_addr) {
+
   int addr_fd = open(kNvPath, O_RDONLY);
   if (addr_fd != -1) {
     char address[kNvPathSize] = {0};
@@ -51,7 +52,6 @@ bool BluetoothAddress::get_local_address(uint8_t* local_addr) {
     local_addr[3] = address[5];
     local_addr[4] = address[4];
     local_addr[5] = address[3];
-
     return true;
   }
   return false;
