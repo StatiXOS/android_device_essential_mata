@@ -114,6 +114,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0 \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
+PRODUCT_COPY_FILES += \
+    device/essential/mata/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+
 # Camera
 PRODUCT_COPY_FILES += \
     device/essential/mata/configs/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
