@@ -39,5 +39,6 @@
 /vendor/bin/init\.mata\.hdmi\.sh                              u:object_r:qti_init_shell_exec:s0
 /vendor/bin/init\.qcom\.devstart\.sh                          u:object_r:init-qcom-devstart-sh_exec:s0
 /vendor/bin/init\.qcom\.power\.sh                             u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qcom\.ipastart\.sh                          u:object_r:init-qcom-ipastart-sh_exec:s0
 
 /vendor/usr/keylayout/uinput-fpc.kl                           u:object_r:vendor_keylayout_file:s0

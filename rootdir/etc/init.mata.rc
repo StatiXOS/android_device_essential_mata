@@ -130,9 +130,6 @@ on fs
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
-    # init.target.rc
-    write /dev/ipa 1
-
     # Wait qseecomd started
     wait_for_prop sys.listeners.registered true
 
@@ -700,6 +697,23 @@ on property:vendor.ims.QMI_DAEMON_STATUS=1
 on property:vendor.ims.DATA_DAEMON_STATUS=1
     start vendor.ims_rtp_daemon
     start vendor.imsrcsservice
+
+service vendor.ipacm /vendor/bin/ipacm
+    class main
+    user radio
+    group radio inet
+    disabled
+    writepid /dev/cpuset/system-background/tasks
+
+service vendor.ipastart_sh /vendor/bin/init.qcom.ipastart.sh
+    class main
+    user root
+    group root
+    disabled
+    oneshot
+
+on property:vendor.sys.listeners.registered=true
+    start vendor.ipastart_sh
 
 service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
