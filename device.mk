@@ -18,6 +18,10 @@
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := msm8998
 
+# IMS
+PRODUCT_PACKAGES += \
+    libbase_shim
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/essential/mata
