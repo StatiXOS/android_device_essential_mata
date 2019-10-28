@@ -698,13 +698,6 @@ on property:vendor.ims.DATA_DAEMON_STATUS=1
     start vendor.ims_rtp_daemon
     start vendor.imsrcsservice
 
-service vendor.ipacm /vendor/bin/ipacm
-    class main
-    user radio
-    group radio inet
-    disabled
-    writepid /dev/cpuset/system-background/tasks
-
 service vendor.ipastart_sh /vendor/bin/init.qcom.ipastart.sh
     class main
     user radio
