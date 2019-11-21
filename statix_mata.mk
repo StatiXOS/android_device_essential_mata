@@ -30,7 +30,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
         PRODUCT_NAME=mata \
         PRIVATE_BUILD_DESC="mata-user 8.1.0 OPM1.180104.092 224 release-keys"
 
-BUILD_FINGERPRINT := essential/mata/mata:8.1.0/OPM1.180104.092/224:user/release-keys
+	BUILD_FINGERPRINT := essential/mata/mata:8.1.0/OPM1.180104.092/224:user/release-keys
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.fingerprint=essential/mata/mata:8.1.0/OPM1.180104.092/224:user/release-keys
+
 
 PRODUCT_ACTIONABLE_COMPATIBLE_PROPERTY_DISABLE := true
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
