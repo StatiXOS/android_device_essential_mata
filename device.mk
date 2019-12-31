@@ -156,7 +156,7 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    device/essential/mata/recovery/root/init.recovery.mata.rc:recovery/root/init.recovery.mata.rc
+    device/essential/mata/rootdir/etc/init.recovery.mata.rc:recovery/root/init.recovery.mata.rc
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
