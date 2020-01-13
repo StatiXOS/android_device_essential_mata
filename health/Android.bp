@@ -17,7 +17,6 @@
 cc_binary {
     name: "android.hardware.health@2.0-service.mata",
     init_rc: ["android.hardware.health@2.0-service.mata.rc"],
-    vintf_fragments: ["android.hardware.health@2.0-service.mata.xml"],
     vendor_overlay: true,
     relative_install_path: "hw",
     srcs: [
