@@ -94,10 +94,7 @@ TARGET_SCREEN_WIDTH := 1312
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl:64 \
     android.hardware.boot@1.0-impl.recovery:64 \
-    android.hardware.boot@1.0-service \
-    bootctrl.msm8998 \
     bootctrl.msm8998.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
@@ -106,8 +103,6 @@ PRODUCT_PACKAGES_DEBUG += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl-mata:64 \
-    android.hardware.bluetooth@1.0-service \
-    libbt-vendor
 
 # Camera
 PRODUCT_COPY_FILES += \
