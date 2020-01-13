@@ -93,12 +93,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl-mata:64 \
 
 # Camera
-PRODUCT_COPY_FILES += \
-    device/essential/mata/configs/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/camera/camera_config.xml \
-    device/essential/mata/configs/camera/imx258_chromatix.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/camera/imx258_chromatix.xml \
-    device/essential/mata/configs/camera/imx268_chromatix.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/camera/imx268_chromatix.xml \
-    device/essential/mata/configs/camera/imx258_mono_chromatix.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/camera/imx258_mono_chromatix.xml
-
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
     android.hardware.camera.provider@2.4-impl:32 \
