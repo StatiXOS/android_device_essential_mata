@@ -399,3 +399,7 @@ PRODUCT_PACKAGES += \
     libwifi-hal-qcom \
     wpa_supplicant \
     wpa_supplicant.conf
+
+# vendor_overlay
+PRODUCT_COPY_FILES += \
+    device/essential/mata/dummy_overlay/android.hardware.power@1.3-service.mata-libperfmgr.rc:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/init/android.hardware.power@1.3-service.mata-libperfmgr.rc
