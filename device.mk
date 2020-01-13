@@ -106,13 +106,6 @@ PRODUCT_PACKAGES += \
     libvulkan \
     memtrack.msm8998
 
-# DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service \
-    android.hardware.drm@1.2-service.clearkey \
-    move_widevine_data.sh
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1
