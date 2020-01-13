@@ -16,7 +16,8 @@
 cc_library_shared {
     name: "android.hardware.bluetooth@1.0-impl-mata",
     defaults: ["hidl_defaults"],
-    vendor: true,
+    vendor_overlay: true,
+    stem: "android.hardware.bluetooth@1.0-impl",
     relative_install_path: "hw",
     srcs: [
         "bluetooth_hci.cc",
@@ -34,7 +35,38 @@ cc_library_shared {
         "libutils",
     ],
     static_libs: [
-        "android.hardware.bluetooth-async",
-        "android.hardware.bluetooth-hci",
+        "android.hardware.bluetooth-async-vendor_overlay",
+        "android.hardware.bluetooth-hci-vendor_overlay",
+    ],
+}
+
+cc_library_static {
+    name: "android.hardware.bluetooth-async-vendor_overlay",
+    vendor_overlay: true,
+    defaults: ["hidl_defaults"],
+    srcs: [
+        "async_fd_watcher.cc",
+    ],
+    export_include_dirs: ["."],
+    shared_libs: [
+        "liblog",
+    ],
+}
+cc_library_static {
+    name: "android.hardware.bluetooth-hci-vendor_overlay",
+    vendor_overlay: true,
+    defaults: ["hidl_defaults"],
+    srcs: [
+        "hci_packetizer.cc",
+        "hci_protocol.cc",
+        "h4_protocol.cc",
+        "mct_protocol.cc",
+    ],
+    export_include_dirs: ["."],
+    shared_libs: [
+        "libbase",
+        "libhidlbase",
+        "liblog",
+        "libutils",
     ],
 }
