@@ -1,0 +1,2 @@
+type hbtp, domain;
+r_dir_file(hbtp, sysfs_switch)
