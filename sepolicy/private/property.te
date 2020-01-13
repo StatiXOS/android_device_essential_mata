@@ -1,0 +1,5 @@
+type freq_prop, property_type;
+type vendor_mpctl_prop, property_type;
+type vendor_device_prop, property_type;
+type vendor_wifi_version, property_type;
+type vendor_radio_prop, property_type;
