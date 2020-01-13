@@ -1,3 +1,0 @@
-allow hbtp self:capability sys_nice;
-r_dir_file(hbtp, sysfs_batteryinfo)
-r_dir_file(hbtp, sysfs_switch)

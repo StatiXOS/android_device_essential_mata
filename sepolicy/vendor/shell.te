@@ -1,3 +1,0 @@
-allow shell usb_device:chr_file { open };
-allow shell usb_device:dir { search };
-r_dir_file(shell, ota_package_file)
