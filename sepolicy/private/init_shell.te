@@ -1,0 +1,29 @@
+type qti_init_shell, domain;
+type qti_init_shell_exec, exec_type, vendor_file_type,file_type;
+init_daemon_domain(qti_init_shell)
+
+domain_auto_trans(init, vendor_shell_exec, qti_init_shell)
+
+# For executing init shell scripts (init.qcom.early_boot.sh)
+allow qti_init_shell qti_init_shell_exec:file { rx_file_perms entrypoint };
+#execute init scripts
+allow qti_init_shell vendor_shell_exec:file {rx_file_perms entrypoint };
+allow qti_init_shell vendor_toolbox_exec:file  rx_file_perms;
+# To write to /data/vendor/perfd
+allow qti_init_shell mpctl_data_file:dir w_dir_perms;
+allow qti_init_shell mpctl_data_file:file { write getattr unlink };
+# To get GPU frequencies  and set attributes
+allow qti_init_shell sysfs_kgsl:file { r_file_perms setattr };
+# cpu_boost during touch input
+allow qti_init_shell sysfs_cpu_boost:dir r_dir_perms;
+allow qti_init_shell sysfs_cpu_boost:file rw_file_perms;
+r_dir_file(qti_init_shell, sysfs_cpu_boost)
+allow qti_init_shell sysfs_cpu_boost:file w_file_perms;
+allow qti_init_shell sysfs_msm_power:file rw_file_perms;
+allow qti_init_shell sysfs_devfreq:dir r_dir_perms;
+set_prop(qti_init_shell, vendor_mpctl_prop)
+allow qti_init_shell proc_meminfo:file { open read };
+allow qti_init_shell sysfs_lowmemorykiller:dir search;
+allow qti_init_shell sysfs_lowmemorykiller:file { open read };
+allow qti_init_shell sysfs_msm_power:dir search;
+set_prop(qti_init_shell, ctl_start_prop)

@@ -1,0 +1,2 @@
+get_prop(bootanim, vendor_default_prop)
+allow bootanim vendor_file:dir { read open };

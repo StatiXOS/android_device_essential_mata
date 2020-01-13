@@ -1,0 +1,2 @@
+type netmgrd, domain;
+get_prop(netmgrd, vendor_default_prop)

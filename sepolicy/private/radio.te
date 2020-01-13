@@ -1,0 +1,2 @@
+get_prop(radio, vendor_default_prop)
+get_prop(radio, vendor_mpctl_prop)

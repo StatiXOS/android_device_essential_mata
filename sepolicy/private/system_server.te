@@ -1,0 +1,2 @@
+allow system_server sysfs_graphics:file { getattr open read };
+allow system_server vendor_file:dir r_dir_perms;
