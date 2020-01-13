@@ -55,6 +55,9 @@ AUDIO_FEATURE_ENABLED_USB_TUNNEL := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
 
+# HIDL
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+
 # Kernel
 BOARD_KERNEL_CMDLINE += androidboot.hardware=mata user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += sched_enable_power_aware=1 service_locator.enable=1 swiotlb=2048
