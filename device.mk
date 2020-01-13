@@ -143,10 +143,6 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
-# IRSC
-PRODUCT_COPY_FILES += \
-    device/essential/mata/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
-
 # Keymaster HAL
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
