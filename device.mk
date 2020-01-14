@@ -23,7 +23,6 @@ DEVICE_PACKAGE_OVERLAYS += device/essential/mata/overlay
 
 # Properties
 -include device/essential/mata/system_prop.mk
--include device/essential/mata/vendor_prop.mk
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
