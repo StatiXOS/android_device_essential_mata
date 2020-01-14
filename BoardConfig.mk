@@ -139,7 +139,7 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=mata user_debug=31 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048 androidboot.configfs=true
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3
-BOARD_KERNEL_CMDLINE += loop.max_part=7
+BOARD_KERNEL_CMDLINE += loop.max_part=7 androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -179,14 +179,17 @@ TARGET_RECOVERY_UI_MARGIN_WIDTH := 64
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := persist
+BOARD_ROOT_EXTRA_FOLDERS := persist firmware
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
-BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt:/firmware
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
+    device/qcom/sepolicy-legacy-um/public
+
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+    device/qcom/sepolicy-legacy-um/private
 
 # Timeservice
 BOARD_USES_QC_TIME_SERVICES := true
