@@ -180,9 +180,8 @@ TARGET_RECOVERY_UI_MARGIN_WIDTH := 64
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := persist
+BOARD_ROOT_EXTRA_FOLDERS := persist firmware
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
-BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt:/firmware
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
