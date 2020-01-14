@@ -119,8 +119,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service
 
 # Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.0-service.mata
+#PRODUCT_PACKAGES += \
+#    android.hardware.health@2.0-service.mata
 
 # HDR
 PRODUCT_COPY_FILES += \
@@ -146,10 +146,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
-
-# Led packages
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.mata
 
 # Network
 PRODUCT_PACKAGES += \
