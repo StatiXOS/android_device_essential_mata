@@ -20,8 +20,6 @@ PRODUCT_BOARD_PLATFORM := msm8998
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/essential/mata/overlay
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
 
 # Properties
 -include device/essential/mata/system_prop.mk
@@ -86,7 +84,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl-mata:64 \
+    android.hardware.bluetooth@1.0-impl-mata \
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -282,4 +280,3 @@ PRODUCT_PACKAGES += \
 # vendor_overlay
 PRODUCT_COPY_FILES += \
     device/essential/mata/dummy_overlay/android.hardware.power@1.3-service.mata-libperfmgr.rc:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/init/android.hardware.power@1.3-service.mata-libperfmgr.rc \
-    device/essential/mata/dummy_overlay/android.hardware.thermal@1.0-service.mata.rc:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/init/android.hardware.thermal@1.0-service.mata.rc
