@@ -89,7 +89,6 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
-    libxml2 \
     Snap
 
 # Display
@@ -111,11 +110,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/essential/mata/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl
 
-# Gatekeeper HAL
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
-
 # Health
 #PRODUCT_PACKAGES += \
 #    android.hardware.health@2.0-service.mata
@@ -134,7 +128,6 @@ PRODUCT_PACKAGES += \
     fstab.persist \
     init.mata.ramdump.rc \
     init.mata.rc \
-    init.mata.usb.rc \
     init.qcom.devstart.sh \
     init.qcom.ipastart.sh \
     init.qcom.post_boot.sh \
@@ -185,14 +178,6 @@ PRODUCT_COPY_FILES += \
     device/essential/mata/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     device/essential/mata/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
-# QMI
-PRODUCT_PACKAGES += \
-    libjson
-
-# Radio
-PRODUCT_PACKAGES += \
-    librmnetctl
-
 # Recovery
 PRODUCT_COPY_FILES += \
     device/essential/mata/recovery/root/fstab.recovery.mata:recovery/root/fstab.recovery.mata \
@@ -219,19 +204,8 @@ PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
 
 # Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.pixel
-
 PRODUCT_COPY_FILES += \
     device/essential/mata/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/thermal_info_config.json
-
-# Touchscreen
-PRODUCT_PACKAGES += \
-    libtinyxml2
-
-# Tracing
-PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service.pixel
 
 # Update engine
 PRODUCT_PACKAGES += \
@@ -254,28 +228,9 @@ $(call inherit-product, build/target/product/verity.mk)
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.2
 
-# VNDK
-# Update this list with what each blob is actually for
-# libicuuc: vendor.qti.hardware.qteeconnector@1.0-impl
-# libstdc++: hexagon DSP blobs
-PRODUCT_PACKAGES += \
-    libicuuc.vendor \
-    libstdc++.vendor \
-    vndk_package
-
 # Wifi
 PRODUCT_COPY_FILES += \
     device/essential/mata/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/wifi/wpa_supplicant_overlay.conf
-
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy \
-    hostapd \
-    hostapd_cli \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
-    libwifi-hal-qcom \
-    wpa_supplicant \
-    wpa_supplicant.conf
 
 # vendor_overlay
 PRODUCT_COPY_FILES += \
