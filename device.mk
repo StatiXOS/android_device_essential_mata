@@ -92,15 +92,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    copybit.msm8998 \
-    gralloc.msm8998 \
-    hwcomposer.msm8998 \
-    libdisplayconfig \
-    liboverlay \
     libqdMetaData.system \
-    libtinyxml \
-    libvulkan \
-    memtrack.msm8998
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -151,18 +143,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     NotchBarKiller
-
-# OMX
-PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
-    libstagefrighthw
 
 # Permissions
 PRODUCT_COPY_FILES += \
