@@ -63,10 +63,7 @@ TARGET_SCREEN_WIDTH := 1312
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl:64 \
     android.hardware.boot@1.0-impl.recovery:64 \
-    android.hardware.boot@1.0-service \
-    bootctrl.msm8998 \
     bootctrl.msm8998.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
@@ -78,29 +75,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@2.0-impl:64 \
-    android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-impl:64 \
-    android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.mapper@2.0-impl-2.1 \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
-    copybit.msm8998 \
-    gralloc.msm8998 \
-    hwcomposer.msm8998 \
-    libdisplayconfig \
-    liboverlay \
     libqdMetaData.system \
-    libtinyxml \
-    libvulkan \
-    memtrack.msm8998
-
-# DRM
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service \
-    android.hardware.drm@1.2-service.clearkey \
-    move_widevine_data.sh
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -108,11 +83,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     device/essential/mata/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
-
-# Gatekeeper HAL
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
 
 # HDR
 PRODUCT_COPY_FILES += \
@@ -143,11 +113,6 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
-# Keymaster HAL
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service
-
 # Led packages
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.mata
@@ -158,7 +123,6 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.1-service \
     com.android.nfc_extras \
     NfcNci \
     Tag
@@ -167,18 +131,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     NotchBarKiller
-
-# OMX
-PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
-    libstagefrighthw
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -193,27 +145,10 @@ PRODUCT_COPY_FILES += \
     device/essential/mata/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     device/essential/mata/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
-# QMI
-PRODUCT_PACKAGES += \
-    libjson
-
-# Radio
-PRODUCT_PACKAGES += \
-    librmnetctl
-
 # Recovery
 PRODUCT_COPY_FILES += \
     device/essential/mata/recovery/root/fstab.recovery.mata:recovery/root/fstab.recovery.mata \
     device/essential/mata/recovery/root/init.recovery.mata.rc:recovery/root/init.recovery.mata.rc
-
-# RenderScript HAL
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
-
-# Sensors
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl:64 \
-    android.hardware.sensors@1.0-service
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
@@ -227,10 +162,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Tethering
-PRODUCT_PROPERTY_OVERRIDES += \
-    net.tethering.noprovisioning=true
-
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
@@ -242,14 +173,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/essential/mata/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
     device/essential/mata/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
-# Touchscreen
-PRODUCT_PACKAGES += \
-    libtinyxml2
-
-# Tracing
-PRODUCT_PACKAGES += \
-    android.hardware.atrace@1.0-service.pixel
 
 # Update engine
 PRODUCT_PACKAGES += \
@@ -271,15 +194,6 @@ $(call inherit-product, build/target/product/verity.mk)
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.2
-
-# VNDK
-# Update this list with what each blob is actually for
-# libicuuc: vendor.qti.hardware.qteeconnector@1.0-impl
-# libstdc++: hexagon DSP blobs
-PRODUCT_PACKAGES += \
-    libicuuc.vendor \
-    libstdc++.vendor \
-    vndk_package
 
 # Wifi
 PRODUCT_COPY_FILES += \
