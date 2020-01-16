@@ -81,7 +81,7 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1
 
 PRODUCT_COPY_FILES += \
-    device/essential/mata/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/usr/keylayout/uinput-fpc.kl
+    device/essential/mata/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl
 
 # HDR
 PRODUCT_COPY_FILES += \
