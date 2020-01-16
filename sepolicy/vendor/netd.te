@@ -1,1 +1,0 @@
-allow netd priv_app:unix_stream_socket { getattr getopt read write shutdown };
