@@ -102,12 +102,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl-mata:64 \
-    android.hardware.bluetooth@1.0-service \
-    libbt-vendor
-
 # Camera
 PRODUCT_COPY_FILES += \
     device/essential/mata/configs/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
