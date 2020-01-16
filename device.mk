@@ -32,7 +32,7 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/public.libraries.txt
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -82,11 +82,11 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1
 
 PRODUCT_COPY_FILES += \
-    device/essential/mata/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
+    device/essential/mata/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/usr/keylayout/uinput-fpc.kl
 
 # HDR
 PRODUCT_COPY_FILES += \
-    device/essential/mata/configs/hdr_tm_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hdr_tm_config.xml
+    device/essential/mata/configs/hdr_tm_config.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/hdr_tm_config.xml
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -171,8 +171,8 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.pixel
 
 PRODUCT_COPY_FILES += \
-    device/essential/mata/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
-    device/essential/mata/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+    device/essential/mata/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/thermal-engine.conf \
+    device/essential/mata/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/thermal_info_config.json
 
 # Update engine
 PRODUCT_PACKAGES += \
