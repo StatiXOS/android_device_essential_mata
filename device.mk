@@ -165,7 +165,6 @@ PRODUCT_COPY_FILES += \
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     device/essential/mata \
-    hardware/google/pixel
 
 # Telephony
 PRODUCT_PACKAGES += \
