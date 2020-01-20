@@ -10,6 +10,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Camera
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.camera.expose.aux=1 \
+    persist.camera.max.previewfps=60 \
+    vidc.enc.dcvs.extra-buff-count=2 \
     vendor.camera.aux.packagelist="org.codeaurora.snapcam,com.essential.klik,org.lineageos.snap"
 
 # Dalvik
@@ -20,12 +23,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m
+
 # Display
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.display.disable_partial_split=1 \
     vendor.gralloc.enable_fb_ubwc=1 \
     vendor.display.disable_skip_validate=1 \
     vendor.display.perf_hint_window=50 \
+
+# HDR
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.qcom.hdr.config=/vendor/etc/hdr_tm_config.xml
 
 # Surfaceflinger
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
