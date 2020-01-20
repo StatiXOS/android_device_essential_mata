@@ -28,3 +28,7 @@ persist.ctm.               u:object_r:vendor_default_prop:s0
 persist.net.logmask        u:object_r:vendor_default_prop:s0
 persist.rmnet.data.enable  u:object_r:vendor_default_prop:s0
 rild.libpath               u:object_r:vendor_default_prop:s0
+persist.denoise. u:object_r:camera_prop:s0
+persist.dualcam. u:object_r:camera_prop:s0
+persist.tnr.     u:object_r:camera_prop:s0
+persist.capture. u:object_r:camera_prop:s0
