@@ -208,6 +208,8 @@ on init
     write /sys/bus/msm_subsys/devices/subsys5/restart_level RELATED
     write /sys/bus/msm_subsys/devices/subsys6/restart_level RELATED
 
+    chmod 666 /proc/cmdline
+
 on fs
     mount_all /vendor/etc/fstab.mata --early
 
@@ -834,6 +836,28 @@ service vendor.qti /vendor/bin/qti
     group radio net_raw diag usb net_admin
     disabled
     writepid /dev/cpuset/system-background/tasks
+
+# Set vendor-ril lib path based on Meta version
+on property:vendor.rild.libpath=*
+    setprop rild.libpath ${vendor.rild.libpath}
+
+service ril-daemon2 /vendor/bin/hw/rild -c 2
+    class main
+    socket rild2 stream 660 root radio
+    socket rild-debug2 stream 660 radio system
+    user radio
+    disabled
+    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+
+service ril-daemon3 /vendor/bin/hw/rild -c 3
+    class main
+    socket rild3 stream 660 root radio
+    socket rild-debug3 stream 660 radio system
+    user radio
+    disabled
+    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
