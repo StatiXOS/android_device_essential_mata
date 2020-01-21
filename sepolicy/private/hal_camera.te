@@ -1,3 +1,4 @@
+get_prop(hal_camera, public_vendor_default_prop)
 get_prop(hal_camera, vendor_default_prop)
 get_prop(hal_camera, camera_prop)
 set_prop(hal_camera, camera_prop)
