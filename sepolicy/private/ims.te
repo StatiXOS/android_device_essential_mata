@@ -1,0 +1,2 @@
+type ims, domain;
+get_prop(ims, public_vendor_default_prop)

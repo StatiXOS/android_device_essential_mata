@@ -1,3 +1,10 @@
 vendor.qti.hardware.perf::IPerf                                 u:object_r:hal_perf_hwservice:s0
+vendor.qti.hardware.radio.qtiradio::IQtiRadio                u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.data.latency::ILinkLatency               u:object_r:hal_latency_hwservice:s0
+vendor.qti.hardware.radio.lpa::IUimLpa                          u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.uim::IUim                             u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.uim_remote_client::IUimRemoteServiceClient u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.uim_remote_server::IUimRemoteServiceServer u:object_r:hal_telephony_hwservice:s0
 com.quicinc.cne.api::IApiService            u:object_r:hal_cne_hwservice:s0
 com.quicinc.cne.server::IServer             u:object_r:hal_cne_hwservice:s0
+vendor.essential.hardware.sidecar::ISidecar u:object_r:hal_sidecar_essential_hwservice:s0
