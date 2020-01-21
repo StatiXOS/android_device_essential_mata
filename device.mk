@@ -35,7 +35,10 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
+    device/essential/mata/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/audio_platform_info.xml \
+    device/essential/mata/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/audio_policy_configuration.xml \
     device/essential/mata/audio/listen_platform_info.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/listen_platform_info.xml \
+    device/essential/mata/audio/mixer_paths_tasha.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/mixer_paths_tasha.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/hearing_aid_audio_policy_configuration.xml \
