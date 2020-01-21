@@ -1,2 +1,4 @@
 type hal_perf_hwservice, hwservice_manager_type;
+type hal_latency_hwservice, hwservice_manager_type;
 type hal_cne_hwservice, hwservice_manager_type;
+type hal_sidecar_essential_hwservice, hwservice_manager_type;
