@@ -1,4 +1,5 @@
 type cnd, domain;
 typeattribute cnd data_between_core_and_vendor_violators;
+add_hwservice(cnd, hal_latency_hwservice)
 add_hwservice(cnd, hal_cne_hwservice)
 allow cnd system_data_file:lnk_file r_file_perms;
