@@ -75,6 +75,9 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32
 
+# Dalvik
+-include frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk
+
 # Display
 PRODUCT_PACKAGES += \
     libqdMetaData.system \
