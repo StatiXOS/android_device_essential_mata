@@ -635,6 +635,7 @@ on property:sys.boot_completed=1
     write /sys/devices/soc0/image_crm_version "REL"
 
     start vendor.qcom-post-boot
+    setprop vendor.post_boot.parsed 1
 
 on property:vold.decrypt=trigger_restart_framework
     start vendor.qti
