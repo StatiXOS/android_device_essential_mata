@@ -14,10 +14,6 @@
 # limitations under the License.
 #
 
-# Board
-PRODUCT_USES_QCOM_HARDWARE := true
-PRODUCT_BOARD_PLATFORM := msm8998
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/essential/mata/overlay
 
@@ -69,9 +65,18 @@ TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1312
 
 # Boot control
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl.recovery:64 \
-    bootctrl.msm8998.recovery
+PRODUCT_PACKAGES += update_engine \
+		    update_engine_client \
+		    update_verifier \
+		    bootctrl.msm8998 \
+		    android.hardware.boot@1.0-impl \
+		    android.hardware.boot@1.0-service
+
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    bootctrl.msm8998 \
+    libgptutils \
+    libz \
+    libcutils
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
@@ -97,6 +102,9 @@ PRODUCT_COPY_FILES += \
 # HDR
 PRODUCT_COPY_FILES += \
     device/essential/mata/configs/hdr_tm_config.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/hdr_tm_config.xml
+
+# Headers
+-include hardware/qcom/msm8998/msm8998.mk
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -200,6 +208,9 @@ PRODUCT_HOST_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# utilities
+-include device/essential/mata/utils.mk
 
 # Verity
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
