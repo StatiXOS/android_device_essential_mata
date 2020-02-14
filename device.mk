@@ -22,7 +22,7 @@ PRODUCT_BOARD_PLATFORM := msm8998
 DEVICE_PACKAGE_OVERLAYS += device/essential/mata/overlay
 
 # Properties
--include device/essential/mata/system_prop.mk
+TARGET_SYSTEM_PROP := device/essential/mata/system.prop
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
