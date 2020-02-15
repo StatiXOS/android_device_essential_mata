@@ -184,3 +184,10 @@ ro.gpu.available_frequencies="710000000 670000000 596000000 515000000 414000000 
 
 audio.offload.min.duration.secs=0
 vendor.audio.mqa.enable=true
+
+# VoLTE / VoWifi -Radio
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+persist.radio.calls.on.ims=1
