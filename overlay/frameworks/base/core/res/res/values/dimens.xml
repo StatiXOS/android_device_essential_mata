@@ -23,6 +23,5 @@
     <!-- Height of the status bar in landscape -->
     <dimen name="status_bar_height_landscape">28dp</dimen>
     <dimen name="quick_qs_offset_height">144px</dimen>
-    <dimen name="rounded_corner_radius">16px</dimen>
 
 </resources>
