@@ -18,6 +18,8 @@ $(call inherit-product, device/essential/mata/device.mk)
 
 TARGET_RECOVERY_FSTAB := device/essential/mata/rootdir/etc/fstab.mata
 
+$(call inherit-product-if-exists, device/twrp/mata/twrp.mk)
+
 # Device identifiers
 PRODUCT_DEVICE := mata
 PRODUCT_NAME := statix_mata

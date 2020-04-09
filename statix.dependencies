@@ -1,5 +1,10 @@
 [
   {
+    "repository": "StatiXOS/android_device_twrp",
+    "target_path": "device/twrp/mata",
+    "branch": "mata"
+  },
+  {
     "repository": "StatiXOS/android_kernel_essential_msm8998",
     "target_path": "kernel/essential/msm8998",
     "branch": "10"
