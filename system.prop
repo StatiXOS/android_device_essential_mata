@@ -194,3 +194,8 @@ persist.radio.calls.on.ims=1
 
 # drm
 drm.service.enabled=true
+
+# Logging
+persist.log.tag.improveTouch=WARNING
+persist.log.tag.ThermalEngine=WARNING
+persist.log.tag.WCNSS_FILTER=WARNING
