@@ -137,6 +137,13 @@ BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
+# IMS
+TARGET_LD_SHIM_LIBS := /vendor/bin/imsrcsd|/vendor/lib64/libbase_shim.so \
+    /vendor/lib64/lib-imsrcs-v2.so|/vendor/lib64/libbase_shim.so \
+    /vendor/lib64/lib-uceservice.so|/vendor/lib64/libbase_shim.so \
+    /vendor/lib/lib-imsrcs-v2.so|/vendor/lib/libbase_shim.so \
+    /vendor/lib/lib-uceservice.so|/vendor/lib/libbase_shim.so \
+
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=mata user_debug=31 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 service_locator.enable=1

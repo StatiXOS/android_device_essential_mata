@@ -1,2 +1,4 @@
 # Allow domain to get public_vendor_default_prop
 get_prop(domain, public_vendor_default_prop)
+dontaudit domain hal_rcsservice_exec:file r_file_perms;
+dontaudit domain vendor_file:file r_file_perms;
