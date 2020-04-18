@@ -538,8 +538,8 @@ on boot
     chown system shell /sys/class/sidecar/power_control
 
     # set touch props
-     setprop vendor.grip.status off
-     setprop vendor.touch.smoothness 5
+    setprop vendor.grip.status off
+    setprop vendor.touch.smoothness 5
 
 on charger
     setprop persist.sys.usb.config mass_storage
