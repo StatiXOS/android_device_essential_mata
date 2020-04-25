@@ -143,7 +143,6 @@ BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048 androidboot.configfs=true
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3
 BOARD_KERNEL_CMDLINE += loop.max_part=7
-BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
@@ -174,11 +173,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
-# Power
-TARGET_USES_INTERACTION_BOOST := true
-TARGET_USES_NON_LEGACY_POWERHAL := true
-TARGET_OVERLAYS_POWERHAL := true
-
 # Recovery
 TARGET_RECOVERY_UI_MARGIN_WIDTH := 64
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
@@ -187,6 +181,9 @@ TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
 BOARD_ROOT_EXTRA_FOLDERS := persist
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
 BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt:/firmware
+
+# Security Patch Level
+VENDOR_SECURITY_PATCH := 2019-10-05
 
 # SELinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
