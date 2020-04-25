@@ -687,7 +687,6 @@ on property:sys.boot_completed=1
     write /sys/devices/soc0/image_variant "${ro.product.name}-${ro.build.type}"
     write /sys/devices/soc0/image_crm_version "REL"
 
-    setprop vendor.post_boot.parsed 1
     start vendor.qcom-post-boot
 
     # Enable PowerHAL hint processing
