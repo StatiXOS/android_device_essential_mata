@@ -146,7 +146,7 @@ persist.ts.rtmakeup=false
 
 # audio
 ##fluencetype can be "fluence" or "fluencepro" or "none"
-ro.qc.sdk.audio.fluencetype=fluencepro
+ro.qc.sdk.audio.fluencetype=fluence
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicecomm=true
 persist.audio.fluence.voicerec=false
