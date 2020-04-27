@@ -10,3 +10,4 @@ wakelock_use(wcnss_filter);
 
 allow wcnss_filter bluetooth_data_file:dir rw_dir_perms;
 allow wcnss_filter bluetooth_data_file:file create_file_perms;
+allow wcnss_filter wifi_data_file:dir r_dir_perms;

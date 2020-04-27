@@ -1,1 +1,2 @@
 allow hal_power hal_perf_hwservice:hwservice_manager find;
+allow hal_power sysfs_kgsl:dir search;
