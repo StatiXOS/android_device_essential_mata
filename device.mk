@@ -43,6 +43,9 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     libbase_shim
 
+# Notch
+TARGET_HAS_NOTCH := true
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mata \
