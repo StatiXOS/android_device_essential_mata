@@ -3,91 +3,160 @@ product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Sidecar
--app/Score/Score.apk
-app/Score/lib/arm64/libcxaudiohidlib_embcb_jni.so
-app/Score/lib/arm64/libCxAudioHidLib.so
-app/Score/lib/arm64/libusb1.0.so
-bin/fastboot_target
-etc/permissions/vendor-essential-hardware-sidecar.xml
--priv-app/Klik/Klik.apk;PRESIGNED
-product/framework/vendor.essential.hardware.sidecar-V1.0-java.jar
+-system/app/Score/Score.apk|907e9b255ead955e5aec9d41f53baffa832f5925
+system/app/Score/lib/arm64/libcxaudiohidlib_embcb_jni.so|76497a3b7828d030f04f17b14b77a00551748522
+system/app/Score/lib/arm64/libCxAudioHidLib.so|8adbd62d68c1da72942fdb748fb46144afab051d
+system/app/Score/lib/arm64/libusb1.0.so|c6dd8c03cd3bd513c78552646ac78391078403bb
+system/bin/fastboot_target|37c60988c62a95b2d42a9c4a3917b235d81924f8
+system/etc/permissions/vendor-essential-hardware-sidecar.xml|d1590022c40005d4c67dc9024e4835838da20364
+-system/priv-app/Klik/Klik.apk;PRESIGNED|7bce74a762a378cd1215495885d3188310600218
+system/product/framework/vendor.essential.hardware.sidecar-V1.0-java.jar|e5e9d8a0e501f5ddde6b9eba01763c283debfd94
 
-# CNE
-etc/permissions/cneapiclient.xml
-etc/permissions/com.quicinc.cne.xml
-framework/cneapiclient.jar
-framework/com.quicinc.cne.api-V1.0-java.jar
-framework/com.quicinc.cne.jar
--priv-app/CNEService/CNEService.apk
+# CNE - LA.UM.8.6.2.r1
+system/etc/cne/Nexus/ATT/ATT_profiles.xml
+system/etc/cne/Nexus/ROW/ROW_profiles.xml
+system/etc/cne/Nexus/VZW/VZW_profiles.xml
+product/framework/com.quicinc.cne.api-V1.1-java.jar
+product/framework/com.quicinc.cne.constants-V1.0-java.jar
+product/framework/com.quicinc.cne.constants-V2.0-java.jar
+product/framework/com.quicinc.cne.constants-V2.1-java.jar
+product/framework/vendor.qti.hardware.data.cne.internal.api-V1.0-java.jar
+product/framework/vendor.qti.hardware.data.cne.internal.constants-V1.0-java.jar
+product/lib/com.quicinc.cne.api@1.0.so
+product/lib/com.quicinc.cne.api@1.1.so
+product/lib/com.quicinc.cne.constants@1.0.so
+product/lib/com.quicinc.cne.constants@2.0.so
+product/lib/com.quicinc.cne.constants@2.1.so
+product/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so
+product/lib/vendor.qti.hardware.data.cne.internal.constants@1.0.so
+product/lib/vendor.qti.hardware.data.cne.internal.server@1.0.so
+product/lib64/com.quicinc.cne.api@1.0.so
+product/lib64/com.quicinc.cne.api@1.1.so
+product/lib64/com.quicinc.cne.constants@1.0.so
+product/lib64/com.quicinc.cne.constants@2.0.so
+product/lib64/com.quicinc.cne.constants@2.1.so
+product/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
+product/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
+product/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
+-vendor/app/CneApp/CneApp.apk
+vendor/bin/cnd
+vendor/etc/cne/profileSlm.xml
+vendor/etc/cne/slm.conf
+vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile5.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile6.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile6.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile7.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile15.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile16.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile17.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile18.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile19.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile20.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile21.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile32.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
+vendor/etc/init/cnd.rc
+vendor/lib/libcne.so
+vendor/lib/libcneapiclient.so
+vendor/lib/libcneoplookup.so
+vendor/lib/libcneqmiutils.so
+vendor/lib/libwms.so
+vendor/lib/libwqe.so
+vendor/lib/libxml.so
+vendor/lib/vendor.qti.hardware.slmadapter@1.0.so
+vendor/lib64/libcne.so
+vendor/lib64/libcneapiclient.so
+vendor/lib64/libcneoplookup.so
+vendor/lib64/libcneqmiutils.so
+vendor/lib64/libwms.so
+vendor/lib64/libwqe.so
+vendor/lib64/libxml.so
+vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so
 
 # Hotword Enrollment
--priv-app/HotwordEnrollmentOKGoogleWCD9335/HotwordEnrollmentOKGoogleWCD9335.apk;PRESIGNED
--priv-app/HotwordEnrollmentTGoogleWCD9335/HotwordEnrollmentTGoogleWCD9335.apk;PRESIGNED
--priv-app/HotwordEnrollmentXGoogleWCD9335/HotwordEnrollmentXGoogleWCD9335.apk;PRESIGNED
+-system/priv-app/HotwordEnrollmentOKGoogleWCD9335/HotwordEnrollmentOKGoogleWCD9335.apk;PRESIGNED|dc529adb0f88d04e904b86a9df8c185039838dc5
+-system/priv-app/HotwordEnrollmentTGoogleWCD9335/HotwordEnrollmentTGoogleWCD9335.apk;PRESIGNED|d1bb647653dec09596428db954b17114478df4cc
+-system/priv-app/HotwordEnrollmentXGoogleWCD9335/HotwordEnrollmentXGoogleWCD9335.apk;PRESIGNED|563ed4da71d046696134fcae78dc1a41b3aacf04
 
-# QMI
-etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml
+# QMI - LA.UM.8.6.2.r1
+system/etc/permissions/qti_permissions.xml
 
-# Radio
--app/embms/embms.apk
-etc/permissions/embms.xml
-framework/embmslibrary.jar
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+# Radio - LA.UM.8.6.2.r1
+-product/app/embms/embms.apk
+product/etc/permissions/embms.xml
+product/framework/embmslibrary.jar
+-product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
-# Radio - IMS
--app/ims/ims.apk
--app/uceShimService/uceShimService.apk|acfdef9ac40bf6b1bd44dfb4e658387d4cf33d0a
-lib64/libdiag_system.so
-lib64/libimscamera_jni.so
-lib64/libimsmedia_jni.so
-lib64/vendor.qti.imsrtpservice@1.0.so
+# Radio - IMS -LA.UM.8.6.2.r1
+-product/priv-app/ims/ims.apk
+-product/app/uceShimService/uceShimService.apk
+product/lib64/libdiag_system.so
+product/lib64/libimscamera_jni.so
+product/lib64/libimsmedia_jni.so
+product/lib64/vendor.qti.imsrtpservice@2.0.so
+product/lib64/vendor.qti.imsrtpservice@2.1.so
 
-# vendor_overlay
-# IMS
-vendor_overlay/bin/imsrcsd|7deec295f41a1c3abd336162497ec350d395d82c
-vendor_overlay/lib/lib-uceservice.so|0945facbeb66835c498d03ee10907f31a3f77c9f
-vendor_overlay/lib/lib-imsrcs-v2.so|989ac8758f3932f8ca9b8a22b979c155362885ac
-vendor_overlay/lib64/lib-imsrcs-v2.so|17f966c6309d51c7ecdb36595214e3a9ae89966d
-vendor_overlay/lib64/lib-uceservice.so|777c2d57ef5c8ea795ebb244c169f26ca845389a
+# IMS - LA.UM.8.6.2.r1
+vendor/bin/imsrcsd
+vendor/lib/lib-uceservice.so
+vendor/lib/lib-imsrcs-v2.so
+vendor/lib64/lib-imsrcs-v2.so
+vendor/lib64/lib-uceservice.so
 
-# Perf
-vendor_overlay/bin/hw/vendor.qti.hardware.perf@1.0-service|ecd8296c848b6470a75a6ae7b235d079cacee3a5
-vendor_overlay/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
-vendor_overlay/etc/perf/commonresourceconfigs.xml|20280e40ca43784316e96be09fe2d2296d79e972
-vendor_overlay/etc/perf/perf-profile0.conf|02204355bf29ceb0460cd53e6716552bb9d9b05f
-vendor_overlay/etc/perf/perf-profile1.conf|4056b772f2790ffd2f466275be8f03e4a796b55c
-vendor_overlay/etc/perf/perf-profile2.conf|341790cfe6d82602ef354b821c5cfdec0dad76e3
-vendor_overlay/etc/perf/perf-profile3.conf|eb70ebc87c8a079b0706fa7ac1fb02ff60a7bdc5
-vendor_overlay/etc/perf/perf-profile4.conf|530f7ab890fa9ca44e90944deb1a66ef79613c5e
-vendor_overlay/etc/perf/perf-profile5.conf|55d67b5afb0cc56e4fe5e9515226be346c9daefc
-vendor_overlay/etc/perf/perf-profile6.conf|910a193b8425bbe0080f746d6788e66986b2e762
-vendor_overlay/etc/perf/perfboostsconfig.xml|6bc4336f8d5570788d52d9ad1824c8ecd6d83da4
-vendor_overlay/etc/perf/targetconfig.xml|460d39ad0a0e7c54a94ba92647ea2b995fc0fe18
-vendor_overlay/etc/perf/targetresourceconfigs.xml|60ec6aded75bcc831b066c966f872fbd75fea881
-vendor_overlay/etc/powerhint.xml|030d63f3171b3aff107fe3ddd1c147061e473c90
-vendor_overlay/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|c703642ce5b3a2368564b4b8e8b3ec7a73f6869c
-vendor_overlay/lib/libperfgluelayer.so|9e14c8e4bddf1f5c9c03c3b85fd2a44bfad1a977
-vendor_overlay/lib/libqti-iopd-client.so|0d54d3b4568ddee118507a734ce7cf70da336807
-vendor_overlay/lib/libqti-perfd-client.so|85ebe15611a5153a70fb48cce5ddd28ebdd5701c
-vendor_overlay/lib/libqti-perfd.so|d2b3c95f44da3a650f4b3a9ee986e6318d599b8a
-vendor_overlay/lib/libqti-util.so|d7f4c7588d562a17a379eda7403d487e088769ee
-vendor_overlay/lib/libqti-utils.so|d1e1b7b1abb1a631e3f8b65dcdcc2a5329a94ea8
-vendor_overlay/lib/vendor.qti.hardware.iop@1.0.so|c56fab99349451116d8f45c86b4b2a300234ee92
-vendor_overlay/lib/vendor.qti.hardware.iop@2.0.so|1ea979ac1751dcc33566f2ce66aa9f1266919c48
-vendor_overlay/lib/vendor.qti.hardware.perf@1.0.so|b5a3f46a254ed8b34f22622ffa96afe73a2098cd
-vendor_overlay/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|4aa645e7441c7f146ea287985f98755ddee096db
-vendor_overlay/lib64/libperfgluelayer.so|afd773f4eb5aaa215706763c2376eaa9d1382143
-vendor_overlay/lib64/libqti-iopd-client.so|363be4012d8add25f80c6986894c6d3e2bf2ebab
-vendor_overlay/lib64/libqti-perfd-client.so|974abf576e3cbb13774671f8a80be5705063e5c2
-vendor_overlay/lib64/libqti-perfd.so|f26613aa8a5fad32f02083785f25f901e524620f
-vendor_overlay/lib64/libqti-util.so|bdf3e4bd3ff525c76948230e26829a3999664a02
-vendor_overlay/lib64/libqti-utils.so|0411b2b1033fbb699c75c5a7772b8651910f2b97
-vendor_overlay/lib64/vendor.qti.hardware.iop@1.0.so|7010b1d870db755d0fdbcfc105141178f404de9e
-vendor_overlay/lib64/vendor.qti.hardware.iop@2.0.so|178e7b28d0c2a1b77a5275abca60625c05a4e1d8
-vendor_overlay/lib64/vendor.qti.hardware.perf@1.0.so|4b9ac07cfd96d475701642a3e7adfcca58e364e1
-
+# Perf - LA.UM.8.6.2.r1
+system/lib/libqspmsvc.so
+system/lib64/libqspmsvc.so
+vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
+vendor/bin/hw/vendor.qti.hardware.perf@2.0-service
+vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
+vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc
+vendor/etc/perf/lm/AdaptLaunchFeature.xml
+vendor/etc/perf/lm/ReferenceFeature.xml
+vendor/etc/perf/commonresourceconfigs.xml
+vendor/etc/perf/perfboostsconfig.xml
+vendor/etc/perf/perfconfigstore.xml
+vendor/etc/perf/perf-profile0.conf
+vendor/etc/perf/perf-profile1.conf
+vendor/etc/perf/perf-profile2.conf
+vendor/etc/perf/perf-profile3.conf
+vendor/etc/perf/perf-profile4.conf
+vendor/etc/perf/perf-profile5.conf
+vendor/etc/perf/perf-profile6.conf
+vendor/etc/perf/targetconfig.xml
+vendor/etc/perf/targetresourceconfigs.xml
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so
+vendor/lib/libperfconfig.so
+vendor/lib/libperfgluelayer.so
+vendor/lib/libqti-perfd-client.so
+vendor/lib/libqti-perfd.so
+vendor/lib/libqti-util.so
+vendor/lib/libskewknob.so
+vendor/lib/vendor.qti.hardware.iop@2.0.so
+vendor/lib/vendor.qti.hardware.perf@2.0.so
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so
+vendor/lib64/libperfconfig.so
+vendor/lib64/libperfgluelayer.so
+vendor/lib64/libqti-perfd-client.so
+vendor/lib64/libqti-perfd.so
+vendor/lib64/libqti-util.so
+vendor/lib64/libskewknob.so
+vendor/lib64/vendor.qti.hardware.iop@2.0.so
+vendor/lib64/vendor.qti.hardware.perf@2.0.so
 
 # Sensors
 vendor/lib/sensors.hal.tof.so|7026ad35d4e644e0de8c5168e82a5aaf80ce7145
 vendor/lib64/sensors.hal.tof.so|80d754f5eec132a15771b88386b79fb21cf1f44a
-
