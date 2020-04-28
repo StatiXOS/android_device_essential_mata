@@ -138,10 +138,8 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
-# Overlay
-PRODUCT_PACKAGES += \
-    NoCutoutOverlay \
-    NotchBarKiller
+# Build Notch Overlays
+TARGET_HAS_NOTCH := true
 
 # Permissions
 PRODUCT_COPY_FILES += \
