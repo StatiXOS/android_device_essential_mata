@@ -200,3 +200,6 @@ drm.service.enabled=true
 persist.log.tag.improveTouch=WARNING
 persist.log.tag.ThermalEngine=WARNING
 persist.log.tag.WCNSS_FILTER=WARNING
+
+# recovery
+ro.recovery.ui.margin_width=64
