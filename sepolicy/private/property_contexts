@@ -1,11 +1,6 @@
 sys.grip.status u:object_r:persist_touchscreen_prop:s0
 sys.touch.smoothness u:object_r:persist_touchscreen_prop:s0
 ro.vendor.gpu.available_frequencies u:object_r:freq_prop:s0
-vendor.post_boot.parsed    u:object_r:vendor_mpctl_prop:s0
-vendor.perf.cores_online   u:object_r:vendor_mpctl_prop:s0
-persist.vendor.qti.        u:object_r:vendor_mpctl_prop:s0
-ro.vendor.at_library       u:object_r:vendor_mpctl_prop:s0
-vendor.debug.trace.perf    u:object_r:vendor_mpctl_prop:s0
 vendor.qcom.devup          u:object_r:vendor_device_prop:s0
 vendor.wlan.driver.version       u:object_r:vendor_wifi_version:s0
 vendor.wlan.firmware.version     u:object_r:vendor_wifi_version:s0
