@@ -1,2 +1,4 @@
 allow hal_power sysfs_kgsl:dir r_dir_perms;
 allow hal_power sysfs_devfreq:dir r_dir_perms;
+allow hal_power sysfs_kgsl:lnk_file r_file_perms;
+allow hal_power sysfs_devfreq:file rw_file_perms;
