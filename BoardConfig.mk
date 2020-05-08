@@ -16,6 +16,9 @@
 
 DEVICE_PATH := device/essential/mata
 
+#Adblocker
+TARGET_USES_ADBLOCK_HOSTS := true
+
 # Platform
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
