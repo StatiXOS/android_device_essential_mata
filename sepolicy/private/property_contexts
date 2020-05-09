@@ -12,6 +12,7 @@ persist.pps.               u:object_r:vendor_default_prop:s0
 persist.chg.               u:object_r:vendor_default_prop:s0
 persist.chg_pm.            u:object_r:vendor_default_prop:s0
 persist.ctm.               u:object_r:vendor_default_prop:s0
-persist.denoise. u:object_r:camera_prop:s0
-persist.dualcam. u:object_r:camera_prop:s0
-persist.capture. u:object_r:camera_prop:s0
+persist.denoise.           u:object_r:camera_prop:s0
+persist.dualcam.           u:object_r:camera_prop:s0
+persist.capture.           u:object_r:camera_prop:s0
+vendor.camera.aux.         u:object_r:vendor_camera_prop:s0
