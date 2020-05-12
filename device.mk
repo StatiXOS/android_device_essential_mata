@@ -14,11 +14,16 @@
 # limitations under the License.
 #
 
+# Characteristics
+PRODUCT_CHARACTERISTICS := nosdcard
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/essential/mata/overlay
 
 # Properties
 TARGET_SYSTEM_PROP := device/essential/mata/system.prop
+PRODUCT_ACTIONABLE_COMPATIBLE_PROPERTY_DISABLE := true
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
