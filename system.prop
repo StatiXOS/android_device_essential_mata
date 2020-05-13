@@ -202,4 +202,5 @@ persist.log.tag.ThermalEngine=WARNING
 persist.log.tag.WCNSS_FILTER=WARNING
 
 # recovery
+ro.recovery.ui.margin_height=136
 ro.recovery.ui.margin_width=64
