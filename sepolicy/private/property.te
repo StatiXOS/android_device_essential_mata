@@ -4,3 +4,6 @@ type vendor_wifi_version, property_type;
 type vendor_radio_prop, property_type;
 type vendor_camera_prop, property_type;
 type public_vendor_default_prop, property_type;
+#WFD
+type wfd_service_prop, property_type, extended_core_property_type;
+type wfd_debug_prop, property_type, extended_core_property_type;
