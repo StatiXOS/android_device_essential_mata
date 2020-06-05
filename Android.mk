@@ -1,5 +1,4 @@
-#
-# Copyright 2014 The Android Open Source Project
+# Copyright 2014-2020 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 # This contains the module build definitions for the hardware-specific
 # components for this device.
@@ -36,21 +34,15 @@ $(DSP_MOUNT_POINT):
 	@echo "Creating $(DSP_MOUNT_POINT)"
 	@mkdir -p $(TARGET_OUT_VENDOR)/lib/dsp
 
-ALL_DEFAULT_INSTALLED_MODULES += $(DSP_MOUNT_POINT)
-
 DSP_RECOVERY_MOUNT_POINT := $(TARGET_RECOVERY_ROOT_OUT)/vendor/lib/dsp
 $(DSP_RECOVERY_MOUNT_POINT):
 	@echo "Creating $(DSP_RECOVERY_MOUNT_POINT)"
 	@mkdir -p $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(DSP_RECOVERY_MOUNT_POINT)
-
 FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware_mnt
 $(FIRMWARE_MOUNT_POINT):
 	@echo "Creating $(FIRMWARE_MOUNT_POINT)"
 	@mkdir -p $(TARGET_OUT_VENDOR)/firmware_mnt
-
-ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT)
 
 IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
 IMS_SYMLINKS := $(addprefix $(TARGET_OUT_APPS)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
@@ -60,6 +52,10 @@ $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /system/lib64/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES += \
+    $(DSP_MOUNT_POINT) \
+    $(DSP_RECOVERY_MOUNT_POINT) \
+    $(FIRMWARE_MOUNT_POINT) \
+    $(IMS_SYMLINKS)
 
 endif
