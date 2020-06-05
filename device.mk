@@ -1,5 +1,5 @@
-#
 # Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2020 StatiXOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,23 +18,12 @@
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := msm8998
 
-# Characteristics
-PRODUCT_CHARACTERISTICS := nosdcard
-
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += device/essential/mata/overlay
-
-# Properties
-TARGET_SYSTEM_PROP := device/essential/mata/system.prop
-PRODUCT_ACTIONABLE_COMPATIBLE_PROPERTY_DISABLE := true
-PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 560dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
-# Additional native libraries
+# Additional native libraries.
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/public.libraries.txt
 
@@ -67,15 +56,12 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl.recovery:64 \
     bootctrl.msm8998.recovery
 
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
-
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32
 
 # Dalvik
--include frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Display
 PRODUCT_PACKAGES += \
@@ -87,11 +73,11 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1
 
 PRODUCT_COPY_FILES += \
-    device/essential/mata/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl
+    $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl
 
 # HDR
 PRODUCT_COPY_FILES += \
-    device/essential/mata/configs/hdr_tm_config.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/hdr_tm_config.xml
+    $(LOCAL_PATH)/configs/hdr_tm_config.xml:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/hdr_tm_config.xml
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -107,27 +93,13 @@ PRODUCT_PACKAGES += \
     init.qcom.ipastart.sh \
     ueventd.mata.rc
 
-# IPACM
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml
-
-# IPv6 tethering
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes
-
 # IRQ Balancing
- PRODUCT_COPY_FILES += \
-     device/essential/mata/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/msm_irqbalance.conf
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/msm_irqbalance.conf
 
-# Led packages
+# Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.mata
-
-# Network
-PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -135,21 +107,37 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
-# Build Notch Overlays
+# Notch
 TARGET_HAS_NOTCH := true
+
+# Overlays
+PRODUCT_PACKAGES += \
+    EssentialCarrierConfig \
+    EssentialFrameworks \
+    EssentialSettings \
+    EssentialSettingsProvider \
+    EssentialSystemUI \
+    EssentialTelephony
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    device/essential/mata/configs/privapp-permissions-mata.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mata.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-mata.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mata.xml \
+
+# Properties
+PRODUCT_ACTIONABLE_COMPATIBLE_PROPERTY_DISABLE := true
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # QCOM
 PRODUCT_COPY_FILES += \
-    device/essential/mata/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
-    device/essential/mata/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    device/essential/mata/rootdir/etc/init.recovery.mata.rc:recovery/root/init.recovery.mata.rc
+    $(LOCAL_PATH)/rootdir/etc/init.recovery.mata.rc:$(TARGET_COPY_OUT_RAMDISK)/init.recovery.mata.rc
+
+# SDCard
+PRODUCT_CHARACTERISTICS := nosdcard
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
@@ -157,26 +145,22 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
-    telephony-ext \
     ims-ext-common \
     ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
+    telephony-ext \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# TextClassifier
-PRODUCT_PACKAGES += \
-    textclassifier.smartselection.bundle1
-
 # Thermal
 PRODUCT_COPY_FILES += \
-    device/essential/mata/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/thermal_info_config.json
+    $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/thermal_info_config.json
 
-# Update engine
+# Update Engine
 PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
@@ -185,21 +169,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_HOST_PACKAGES += \
     brillo_update_payload
 
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
+# VNDK
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+PRODUCT_TARGET_VNDK_VERSION := 29
 
 # Verity
+$(call inherit-product, build/target/product/verity.mk)
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
 PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/vendor
-$(call inherit-product, build/target/product/verity.mk)
 
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.2
 
-# Wifi
+# WiFi
 PRODUCT_COPY_FILES += \
-    device/essential/mata/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/wifi/wpa_supplicant_overlay.conf
+    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/etc/wifi/wpa_supplicant_overlay.conf
 
 # Wifi Display
 PRODUCT_PACKAGES += \
