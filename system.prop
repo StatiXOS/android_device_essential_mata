@@ -67,6 +67,9 @@ ro.vendor.sensors.wu=false
 ro.cdma.home.operator.alpha=Chameleon
 ro.cdma.home.operator.numeric=310000
 
+# USAP
+persist.device_config.runtime_native.usap_pool_enabled=true
+
 # VoLTE / VoWiFi
 persist.dbg.volte_avail_ovr=1
 persist.dbg.ims_volte_enable=1
