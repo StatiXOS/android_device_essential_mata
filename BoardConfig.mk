@@ -37,6 +37,18 @@ TARGET_HAS_NO_SELECT_BUTTON := true
 
 TARGET_USES_64_BIT_BINDER := true
 
+# Kernel
+BOARD_KERNEL_CMDLINE += androidboot.hardware=mata user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE += sched_enable_power_aware=1 service_locator.enable=1 swiotlb=2048
+BOARD_KERNEL_CMDLINE += loop.max_part=7 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
+BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image lpm_levels.sleep_disabled=1
+BOARD_KERNEL_BASE        := 0x00000000
+BOARD_KERNEL_PAGESIZE    := 4096
+BOARD_KERNEL_OFFSET      := 0x80000
+BOARD_KERNEL_TAGS_OFFSET := 0x02500000
+BOARD_RAMDISK_OFFSET     := 0x02700000
+BOARD_MKBOOTIMG_ARGS     := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4294967296
