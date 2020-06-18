@@ -17,3 +17,7 @@
 # Board
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := msm8998
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    device/essential/mata
