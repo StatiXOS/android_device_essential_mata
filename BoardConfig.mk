@@ -75,3 +75,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Properties
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+
+# Treble
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+BOARD_VNDK_VERSION := current
