@@ -92,6 +92,10 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
 
+# Recovery margin
+TARGET_RECOVERY_UI_MARGIN_HEIGHT := 120
+TARGET_RECOVERY_UI_MARGIN_WIDTH := 64
+
 # Root
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
 BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt:/firmware
