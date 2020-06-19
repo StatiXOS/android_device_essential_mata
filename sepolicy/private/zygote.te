@@ -1,0 +1,2 @@
+allow zygote vendor_file:dir { read open };
+allow zygote proc_cmdline:file { read };

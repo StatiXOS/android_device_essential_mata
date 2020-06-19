@@ -1,0 +1,2 @@
+allow priv_app hal_sidecar_essential_hwservice:hwservice_manager find;
+get_prop(priv_app, public_vendor_default_prop)
