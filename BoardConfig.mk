@@ -91,3 +91,6 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BOARD_VNDK_VERSION := current
+
+# Inherit from the proprietary version
+include vendor/essential/mata/BoardConfigVendor.mk
