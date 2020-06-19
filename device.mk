@@ -52,6 +52,15 @@ PRODUCT_PACKAGES += \
 # Notch
 TARGET_HAS_NOTCH := true
 
+# Overlays
+PRODUCT_PACKAGES += \
+    EssentialCarrierConfig \
+    EssentialFrameworks \
+    EssentialSettings \
+    EssentialSettingsProvider \
+    EssentialSystemUI \
+    EssentialTelephony
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mata \
