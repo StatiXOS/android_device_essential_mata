@@ -43,6 +43,12 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     libbase_shim
 
+# NFC
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    NfcNci \
+    Tag
+
 # Notch
 TARGET_HAS_NOTCH := true
 
