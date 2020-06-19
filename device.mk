@@ -52,6 +52,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     device/essential/mata
 
+# Update engine
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
+PRODUCT_HOST_PACKAGES += \
+    brillo_update_payload
+
+PRODUCT_PACKAGES_DEBUG += \
+    update_engine_client
+
 # Verity
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
 PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/vendor
