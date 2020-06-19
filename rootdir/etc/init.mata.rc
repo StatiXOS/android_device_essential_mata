@@ -345,6 +345,9 @@ on post-fs-data
     mkdir /data/misc/qvr 0770 system system
     mkdir /data/vendor/misc 01771 system system
 
+    # Trigger WLAN driver load
+    write /sys/kernel/boot_wlan/boot_wlan 1
+
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
 
