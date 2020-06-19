@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
     EssentialSystemUI \
     EssentialTelephony
 
+# Permissions
+PRODUCT_COPY_FILES += \
+    device/essential/mata/permissions/privapp-permissions-mata.xml:system/etc/permissions/privapp-permissions-mata.xml
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mata \
