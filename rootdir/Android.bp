@@ -24,3 +24,10 @@ prebuilt_etc {
      vendor_overlay: true,
      src: "etc/fstab.mata",
 }
+
+prebuilt_etc {
+    name: "init.recovery.mata.rc",
+    recovery: true,
+    sub_dir: "init/hw",
+    src: "etc/init.recovery.mata.rc",
+}

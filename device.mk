@@ -72,7 +72,8 @@ PRODUCT_COPY_FILES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mata \
-    init.mata.rc
+    init.mata.rc \
+    init.recovery.mata.rc
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
