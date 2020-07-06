@@ -69,17 +69,10 @@ framework/com.quicinc.cne.api-V1.0-java.jar
 framework/com.quicinc.cne.jar
 -priv-app/CNEService/CNEService.apk
 
-# Health
-vendor/bin/hw/android.hardware.health@2.0-service.mata
-vendor/etc/init/android.hardware.health@2.0-service.mata.rc
-
 # Hotword Enrollment
 -priv-app/HotwordEnrollmentOKGoogleWCD9335/HotwordEnrollmentOKGoogleWCD9335.apk;PRESIGNED
 -priv-app/HotwordEnrollmentTGoogleWCD9335/HotwordEnrollmentTGoogleWCD9335.apk;PRESIGNED
 -priv-app/HotwordEnrollmentXGoogleWCD9335/HotwordEnrollmentXGoogleWCD9335.apk;PRESIGNED
-
-# QMI
-etc/permissions/qti_permissions.xml:vendor/etc/permissions/qti_permissions.xml
 
 # Radio
 -app/embms/embms.apk
@@ -94,10 +87,15 @@ lib64/libdiag_system.so
 lib64/libimscamera_jni.so
 lib64/libimsmedia_jni.so
 lib64/vendor.qti.imsrtpservice@1.0.so
+vendor/bin/imsrcsd:vendor_overlay/bin/imsrcsd
+vendor/lib/lib-imsrcs-v2.so:vendor_overlay/lib/lib-imsrcs-v2.so
+vendor/lib/lib-uceservice.so:vendor_overlay/lib/lib-uceservice.so
+vendor/lib64/lib-imsrcs-v2.so:vendor_overlay/lib64/lib-imsrcs-v2.so
+vendor/lib64/lib-uceservice.so:vendor_overlay/lib64/lib-uceservice.so
 
 # Sensors
-vendor/lib/sensors.hal.tof.so|7026ad35d4e644e0de8c5168e82a5aaf80ce7145
-vendor/lib64/sensors.hal.tof.so|80d754f5eec132a15771b88386b79fb21cf1f44a
+vendor_overlay/lib/sensors.hal.tof.so|7026ad35d4e644e0de8c5168e82a5aaf80ce7145
+vendor_overlay/lib64/sensors.hal.tof.so|80d754f5eec132a15771b88386b79fb21cf1f44a
 
 # Wi-Fi Display
 bin/wfdservice

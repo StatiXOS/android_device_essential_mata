@@ -27,7 +27,7 @@ INITIAL_COPYRIGHT_YEAR=2017
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-LINEAGE_ROOT="$MY_DIR"/../../..
+STX_ROOT="$MY_DIR"/../../..
 
 HELPER="$STX_ROOT"/vendor/statix/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
@@ -44,13 +44,13 @@ write_headers
 
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 
-cat << EOF >> "$BOARDMK"
-TARGET_RECOVERY_DEVICE_DIRS += vendor/$VENDOR/$DEVICE/proprietary
-EOF
-
 cat << EOF >> "$ANDROIDMK"
 
 EOF
+
+PREFIX1='$(TARGET_COPY_OUT_SYSTEM)/vendor_overlay'
+PREFIX2='$(TARGET_COPY_OUT_VENDOR_OVERLAY)'
+sed -i 's/$PREFIX1/$PREFIX2/g' "$PRODUCTMK"
 
 # Finish
 write_footers
