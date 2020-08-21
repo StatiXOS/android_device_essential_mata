@@ -372,6 +372,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
 
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
+
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
