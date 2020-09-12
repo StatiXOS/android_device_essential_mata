@@ -136,6 +136,7 @@ BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt:/firmware
 VENDOR_SECURITY_PATCH := 2020-02-05
 
 # SELinux
+SELINUX_IGNORE_NEVERALLOWS := true
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
