@@ -179,6 +179,7 @@ PRODUCT_PACKAGES += \
     init.mata.usb.rc \
     init.qcom.devstart.sh \
     init.qcom.ipastart.sh \
+    init.recovery.mata.rc \
     ueventd.mata.rc
 
 # IPACM
@@ -307,10 +308,6 @@ PRODUCT_PACKAGES += \
 # Radio
 PRODUCT_PACKAGES += \
     librmnetctl
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    device/essential/mata/rootdir/etc/init.recovery.mata.rc:recovery/root/init.recovery.mata.rc
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
