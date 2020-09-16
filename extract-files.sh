@@ -25,9 +25,9 @@ VENDOR=essential
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-LINEAGE_ROOT="$MY_DIR"/../../..
+STATIX_ROOT="$MY_DIR"/../../..
 
-HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
+HELPER="$STATIX_ROOT"/vendor/statix/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -53,16 +53,16 @@ if [ -z "$SRC" ]; then
 fi
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
+setup_vendor "$DEVICE" "$VENDOR" "$STATIX_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 extract "$MY_DIR"/proprietary-files-recovery.txt "$SRC" "$SECTION"
 
-sed -i 's/service fps_hal_mata/service vendor.fps_hal_mata/g' "$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.mata.rc
-sed -i 's/service sidecar-hal-1-0/service vendor.sidecar-hal-1-0/g' "$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/etc/init/vendor.essential.hardware.sidecar@1.0-service.rc
+sed -i 's/service fps_hal_mata/service vendor.fps_hal_mata/g' "$STATIX_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.mata.rc
+sed -i 's/service sidecar-hal-1-0/service vendor.sidecar-hal-1-0/g' "$STATIX_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/etc/init/vendor.essential.hardware.sidecar@1.0-service.rc
 
-patchelf --add-needed "libbase_shim.so" "$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/bin/imsrcsd
-patchelf --add-needed "libbase_shim.so" "$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib64/lib-imsrcs-v2.so
-patchelf --add-needed "libbase_shim.so" "$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib64/lib-uceservice.so
+patchelf --add-needed "libbase_shim.so" "$STATIX_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/bin/imsrcsd
+patchelf --add-needed "libbase_shim.so" "$STATIX_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib64/lib-imsrcs-v2.so
+patchelf --add-needed "libbase_shim.so" "$STATIX_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib64/lib-uceservice.so
 
 "$MY_DIR"/setup-makefiles.sh
