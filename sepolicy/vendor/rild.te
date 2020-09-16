@@ -1,1 +1,2 @@
 allow rild vendor_file:file rx_file_perms;
+allow rild qti_audio_app:binder { call transfer };
