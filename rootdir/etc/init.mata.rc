@@ -828,19 +828,6 @@ service vendor.sensors /vendor/bin/sensors.qcom
     capabilities NET_BIND_SERVICE
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.start_hci_filter /vendor/bin/wcnss_filter
-    class late_start
-    user bluetooth
-    group bluetooth diag system wakelock
-    disabled
-    writepid /dev/cpuset/system-background/tasks
-
-on property:vendor.wc_transport.start_hci=true
-    start vendor.start_hci_filter
-
-on property:vendor.wc_transport.start_hci=false
-    stop vendor.start_hci_filter
-
 service vendor.thermal-engine /vendor/bin/thermal-engine
    class main
    user root
