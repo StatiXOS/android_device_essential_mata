@@ -291,12 +291,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.pixel-libperfmgr \
-    android.hardware.power.stats@1.0-service.pixel
-
-PRODUCT_COPY_FILES += \
-    device/essential/mata/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+$(call inherit-product, vendor/qcom/opensource/power/power-vendor-product.mk)
 
 # Protobuf
 PRODUCT_PACKAGES += \
