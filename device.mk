@@ -52,7 +52,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libvolumelistener \
-    tinymix
+    tinymix \
+    vendor.qti.hardware.bluetooth_audio@2.0
 
 PRODUCT_COPY_FILES += \
     device/essential/mata/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -107,9 +108,8 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl-mata:64 \
-    android.hardware.bluetooth@1.0-service \
-    libbt-vendor
+    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.btconfigstore@1.0.vendor
 
 # Camera
 PRODUCT_COPY_FILES += \
