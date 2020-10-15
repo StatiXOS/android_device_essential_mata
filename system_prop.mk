@@ -6,7 +6,9 @@
 # Audio
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     audio.deep_buffer.media=true \
-    audio.offload.video=true
+    audio.offload.video=true \
+    ro.config.media_vol_steps=15 \
+    ro.config.vc_call_vol_steps=5
 
 # Camera
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
