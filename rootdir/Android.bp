@@ -45,13 +45,6 @@ prebuilt_etc {
      src: "etc/fstab.persist",
 }
 
-prebuilt_etc {
-    name: "init.recovery.mata.rc",
-    recovery: true,
-    sub_dir: "init/hw",
-    src: "etc/init.recovery.mata.rc",
-}
-
 sh_binary {
     name: "init.qcom.devstart.sh",
     vendor: true,
