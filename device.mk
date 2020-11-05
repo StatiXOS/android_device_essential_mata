@@ -18,6 +18,9 @@
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := msm8998
 
+# Blur
+TARGET_USES_BLUR := true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/essential/mata/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := \
