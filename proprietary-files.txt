@@ -681,6 +681,9 @@ vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
+# Pixel Exclusive XMLs from sailfish-user 10 QP1A.191005.007.A3
+system/etc/sysconfig/pixel_2016_exclusive.xml|c58aa2e9318f7e4c49d3662d4ce701bad61cddee
+
 # Postprocessing
 vendor/etc/qdcm_calib_data_NT35597_cmd_mode_dsc_dsi_panel_Mata.xml|de0c1c5eb3b254ed84efe9b9aa48738a63057d57
 vendor/lib64/libdisp-aba.so
