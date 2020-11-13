@@ -58,7 +58,6 @@ QCOM_BT_USE_BTNV := true
 QCOM_BT_USE_SMD_TTY := true
 
 # Camera
-TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_CAMERA_STUB := true
 
 # Display
