@@ -31,6 +31,6 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
         PRODUCT_NAME=mata \
-        PRIVATE_BUILD_DESC="mata-user 8.1.0 OPM1.180104.092 224 release-keys"
+        PRIVATE_BUILD_DESC="mata-user 7.1.1 NMJ88C 464 release-keys"
 
-BUILD_FINGERPRINT := essential/mata/mata:8.1.0/OPM1.180104.092/224:user/release-keys
+BUILD_FINGERPRINT := essential/mata/mata:7.1.1/NMJ88C/464:user/release-keys
