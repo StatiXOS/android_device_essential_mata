@@ -5,15 +5,9 @@ vendor/lib/libfastcvopt.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 
-# AptX - From crosshatch-user 10 QQ3A.200805.001 6578210 release-keys
-product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-
 # ANT+ (system)
 -lib/libantradio.so|523f108cabe6c0a2a52fa4476ada8b65eacdd9a9
 -lib64/libantradio.so|7b4e5ed251fa9e33960b58495f60de55c6739767
-product/lib/com.qualcomm.qti.ant@1.0.so|fbbb33e875c9f64f0401e6cbcbac8e0c15766481
-product/lib64/com.qualcomm.qti.ant@1.0.so|1a7bee1627309c8eee55dab22b9f25c2302219ae
 
 # ANT+ (vendor)
 vendor/lib/com.qualcomm.qti.ant@1.0.so|f7fb088a6fcc746b4b9f661010542b543a74b92f
