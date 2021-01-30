@@ -52,6 +52,7 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
+    libmalistener \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
