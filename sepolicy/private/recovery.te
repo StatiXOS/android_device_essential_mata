@@ -1,1 +1,0 @@
-allow recovery { adsprpcd_file firmware_file }:filesystem { unmount mount };
