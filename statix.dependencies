@@ -4,9 +4,9 @@
     "target_path": "kernel/essential/msm8998"
   },
   {
-    "repository": "mvaisakh/gcc-arm64",
+    "repository": "sourajitk/prebuilts_gcc_linux-x86_aarch64_arm64-gcc",
     "target_path": "prebuilts/gcc/linux-x86/aarch64/arm64-gcc",
-    "branch": "gcc-master"
+    "branch": "main"
   },
   {
     "repository": "android_vendor_essential",
