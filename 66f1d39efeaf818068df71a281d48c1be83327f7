@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f91a2b8c_d641abc6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2021-03-17T02:19:58Z",
+      "side": 1,
+      "message": "With this commit in, I can connect to networks that advertise WPA3 as the primary encryption type (and have WPA2 fallback enabled)",
+      "revId": "66f1d39efeaf818068df71a281d48c1be83327f7",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    }
+  ]
+}
