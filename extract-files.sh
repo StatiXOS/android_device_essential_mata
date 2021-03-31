@@ -27,7 +27,7 @@ if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
 STATIX_ROOT="$MY_DIR"/../../..
 
-HELPER="$STATIX_ROOT"/vendor/statix/build/tools/extract_utils.sh
+HELPER="$STATIX_ROOT"/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
