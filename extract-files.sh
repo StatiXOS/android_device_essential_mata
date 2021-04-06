@@ -63,7 +63,6 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$STATIX_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" ${KANG} --section "$SECTION"
-extract "$MY_DIR"/proprietary-files-recovery.txt "$SRC" ${KANG} --section "$SECTION"
 
 sed -i 's/service fps_hal_mata/service vendor.fps_hal_mata/g' "$STATIX_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.mata.rc
 sed -i 's/service sidecar-hal-1-0/service vendor.sidecar-hal-1-0/g' "$STATIX_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/etc/init/vendor.essential.hardware.sidecar@1.0-service.rc
