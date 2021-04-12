@@ -77,6 +77,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "TASchedtuneBoost",
+      "Path": "/dev/stune/top-app/schedtune.boost",
+      "Values": [
+        "30",
+        "10"
+      ],
+      "ResetOnInit": true
+    },
+
+    {
       "Name": "CPUBWHystTriggerCount",
       "Path": "/sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count",
       "Values": [
@@ -187,6 +197,12 @@
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
       "Value": "1171200"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "TASchedtuneBoost",
+      "Duration": 0,
+      "Value": "30"
     },
     {
       "PowerHint": "INTERACTION",
