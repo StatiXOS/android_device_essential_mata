@@ -248,13 +248,6 @@ on late-fs
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.mata --late
 
-    # Required for time_daemon
-    mkdir /mnt/vendor/persist/time 0770 system system
-    mkdir /data/vendor/time 0700 system system
-
-    # Start time daemon early so that the system time can be set early
-    start vendor.time_daemon
-
 on post-fs-data
     # msm specific files that need to be created on /data
     mkdir /data/vendor/misc 01771 system system
@@ -267,6 +260,13 @@ on post-fs-data
 
     # Create directory used by media clients
     mkdir /data/vendor/media 0770 mediacodec media
+
+    # Required for time_daemon
+    mkdir /mnt/vendor/persist/time 0770 system system
+    mkdir /data/vendor/time 0700 system system
+
+    # Start time daemon early so that the system time can be set early
+    start vendor.time_daemon
 
     # Create directories for Fingerprint
     mkdir /data/vendor/misc/qti_fp 0770 system system
@@ -836,10 +836,10 @@ service vendor.thermal-engine /vendor/bin/thermal-engine
    group root
 
 service vendor.time_daemon /vendor/bin/time_daemon
-    class core
-    user root
-    group root
-    writepid /dev/cpuset/system-background/tasks
+    class main
+    user system
+    group system
+    capabilities SYS_TIME
 
 service vendor.tftp_server /vendor/bin/tftp_server
     class core
