@@ -303,6 +303,9 @@ TARGET_COMMON_QTI_COMPONENTS := \
     adreno-legacy \
     bt
 
+# QSSI override
+QSSI_OVERRIDE := true
+
 # Radio
 PRODUCT_PACKAGES += \
     librmnetctl
