@@ -1,6 +1,6 @@
 runtime_resource_overlay {
-    name: "TetheringConfigOverlay",
-    theme: "TetheringConfigOverlay",
+    name: "SysUiOverlay12",
+    theme: "SysUiOverlay12",
     certificate: "platform",
     sdk_version: "current",
     vendor: true
