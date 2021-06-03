@@ -301,7 +301,8 @@ PRODUCT_PACKAGES += \
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno-legacy \
-    bt
+    bt \
+    wfd-legacy
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -427,3 +428,4 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
    WfdCommon
+
