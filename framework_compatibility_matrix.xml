@@ -73,7 +73,7 @@
 </hal>
 <hal format="hidl" optional="true">
     <name>android.hardware.drm</name>
-    <version>1.0-2</version>
+    <version>1.0-4</version>
     <interface>
         <name>ICryptoFactory</name>
         <instance>default</instance>
@@ -177,6 +177,12 @@
         <instance>default</instance>
     </interface>
 </hal>
+<hal format="aidl" optional="true">
+    <name>android.hardware.power</name>
+    <version>2</version>
+    <fqname>IPower/default</fqname>
+</hal>
+
 <hal format="hidl" optional="true">
     <name>android.hardware.power.stats</name>
     <version>1.0</version>
@@ -353,6 +359,22 @@
     <version>1.0</version>
     <interface>
         <name>ISidecar</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.qti.hardware.btconfigstore</name>
+    <version>1.0</version>
+    <interface>
+        <name>IBTConfigStore</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.qti.hardware.bluetooth_sar</name>
+    <version>1.1</version>
+    <interface>
+        <name>IBluetoothSar</name>
         <instance>default</instance>
     </interface>
 </hal>
