@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e8551c96_9d5a9a1a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2022-06-18T01:44:49Z",
+      "side": 1,
+      "message": "https://github.com/StatiXOS/android_kernel_essential_msm8998/commit/216543f362d867e5e767a43cb8b409add697e246",
+      "revId": "deee4bc9d25f69689273273fb57d0f5f727fb675",
+      "serverId": "039621b9-0c7c-40f3-867c-684f4bc911d6"
+    }
+  ]
+}
