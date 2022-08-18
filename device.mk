@@ -36,10 +36,9 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl:32 \
     android.hardware.audio.effect@6.0-impl:32 \
     android.hardware.audio.service \
+    android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.2-impl \
-    audio.a2dp.default \
     audio.bluetooth.default \
-    audio.hearing_aid.default \
     audio.primary.msm8998 \
     audio.r_submix.default \
     audio.usb.default \
@@ -96,7 +95,6 @@ PRODUCT_PACKAGES_DEBUG += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
-    libbt-vendor \
     libbthost_if \
     vendor.qti.hardware.btconfigstore@1.0 \
     vendor.qti.hardware.btconfigstore@1.0.vendor
@@ -208,6 +206,10 @@ PRODUCT_COPY_FILES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     device/essential/mata/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+
+# Kernel
+PRODUCT_COPY_FILES += \
+    device/essential/mata-kernel/kernel:kernel
 
 # Kernel headers
 PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom-caf/msm8998/kernel-headers
@@ -373,9 +375,7 @@ PRODUCT_BOOT_JARS += \
 
 
 # Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.pixel
-
+$(call inherit-product, hardware/google/pixel/thermal/device.mk)
 PRODUCT_COPY_FILES += \
     device/essential/mata/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
     device/essential/mata/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json

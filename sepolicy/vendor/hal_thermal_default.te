@@ -1,4 +1,0 @@
-binder_call(hal_thermal_default, servicemanager)
-get_prop(hal_thermal_default, graphics_config_prop)
-
-hal_client_domain(hal_thermal_default, hal_power);
