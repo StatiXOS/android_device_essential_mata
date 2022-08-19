@@ -35,7 +35,6 @@
 /vendor/bin/hw/android\.hardware\.vibrator@1\.2-service\.mata u:object_r:hal_vibrator_default_exec:s0
 /vendor/bin/hw/vendor\.essential\.hardware\.sidecar@1\.0-service u:object_r:hal_sidecar_essential_default_exec:s0
 
-/vendor/bin/hbtp_cmd\.sh                                      u:object_r:hbtp_cmd_exec:s0
 /vendor/bin/init\.qcom\.devstart\.sh                          u:object_r:init-qcom-devstart-sh_exec:s0
 /vendor/bin/init\.qcom\.ipastart\.sh                          u:object_r:init-qcom-ipastart-sh_exec:s0
 /vendor/bin/thermal_symlinks                                  u:object_r:init-thermal-symlinks-sh_exec:s0
