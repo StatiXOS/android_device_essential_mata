@@ -391,6 +391,9 @@ PRODUCT_COPY_FILES += \
     device/essential/mata/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
 # Touchscreen
+PRODUCT_COPY_FILES += \
+    device/essential/mata/configs/hbtp/loader.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/hbtp/loader.cfg
+
 PRODUCT_PACKAGES += \
     libtinyxml2
 
