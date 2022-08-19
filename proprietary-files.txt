@@ -1013,32 +1013,23 @@ vendor/lib/libtime_genoff.so|0e73ee0b125f4538d4afd76b4a4cd009176e98b1
 vendor/lib64/libtime_genoff.so|3f57de1aeb7aa113a0a579cebed85ab4405b9b49
 
 # Touchscreen
-vendor/bin/hbtp_cmd.sh
-vendor/bin/hbtp_daemon
 vendor/etc/hbtp/hbtpcfg_qtc800s.dat
-vendor/etc/hbtp/hbtpcfg_rohm.dat
-vendor/etc/hbtp/loader.cfg
 vendor/etc/hbtp/qtc800s_dsp.bin
-vendor/lib/libfastrpc_utf_stub.so
-vendor/lib/libhbtpclient.so
-vendor/lib/libhbtpdsp.so
-vendor/lib/libhbtpfrmwk.so
-vendor/lib64/libfastrpc_utf_stub.so
-vendor/lib64/libhbtpclient.so
-vendor/lib64/libhbtpdsp.so
-vendor/lib64/libhbtpfrmwk.so
-vendor/lib/vendor.qti.hardware.improvetouch.blobmanager@1.0-service.so
-vendor/lib/vendor.qti.hardware.improvetouch.blobmanager@1.0_vendor.so
-vendor/lib/vendor.qti.hardware.improvetouch.gesturemanager@1.0-service.so
-vendor/lib/vendor.qti.hardware.improvetouch.gesturemanager@1.0_vendor.so
-vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so
-vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0_vendor.so
-vendor/lib64/vendor.qti.hardware.improvetouch.blobmanager@1.0-service.so
-vendor/lib64/vendor.qti.hardware.improvetouch.blobmanager@1.0_vendor.so
-vendor/lib64/vendor.qti.hardware.improvetouch.gesturemanager@1.0-service.so
-vendor/lib64/vendor.qti.hardware.improvetouch.gesturemanager@1.0_vendor.so
-vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so
-vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0_vendor.so
+
+# Touchscreen - from LA.UM.9.2.r1-03500-SDMxx0.0
+vendor/bin/hbtp_daemon|a4a2cf5979cd86d6741ab015c8b7031c0149a567
+vendor/lib/libfastrpc_utf_stub.so|671877d15c80ffec330658262418eec8b7d5f68e
+vendor/lib/libhbtpclient.so|b7b6be66550cbea9a786b13647362077a0032e12
+vendor/lib/libhbtpdsp.so|d8a1db1a10cb0b6dcd343e8e6bd3a4f5f360e58a
+vendor/lib/libhbtpfrmwk.so|839757e4927e8c5006ba131c2b1215cc0e2dff97
+vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so|361b02ad3e1613f5c6c6c546fe8b610cea5c53a0
+vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so|df3500bdd93ab5fd1c16001321064b12a8460b85
+vendor/lib64/libfastrpc_utf_stub.so|4bbe4f788edd5ffaf32e21d5f47d14a0c233cd79
+vendor/lib64/libhbtpclient.so|7ecc7172b2d3ebed91b5c0862178e4c58e6fec14
+vendor/lib64/libhbtpdsp.so|6fffa42e0a9da3b9b0c56f6c9d380d84f2b8a5d9
+vendor/lib64/libhbtpfrmwk.so|ef0a43e3bf27a272da06634657a9e044c7e42368
+vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so|b52d181f80be8eaddb26c7df628e398f662efd93
+vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so|14625370922717efd29a0476482778dccb06e484
 
 # Wi-Fi
 vendor/bin/cnss-daemon
