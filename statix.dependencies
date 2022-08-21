@@ -1,7 +1,7 @@
 [
   {
-    "repository": "android_kernel_essential_msm8998",
-    "target_path": "kernel/essential/msm8998"
+    "repository": "android_device_essential_mata-kernel",
+    "target_path": "device/essential/mata-kernel"
   },
   {
     "repository": "android_vendor_essential",
