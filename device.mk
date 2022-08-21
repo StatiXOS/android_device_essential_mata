@@ -209,6 +209,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/essential/mata/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
+# Kernel
+PRODUCT_COPY_FILES += \
+    device/essential/mata-kernel/kernel:kernel
+
 # Kernel headers
 PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom-caf/msm8998/kernel-headers
 

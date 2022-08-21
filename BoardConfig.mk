@@ -89,11 +89,6 @@ BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_SOURCE := kernel/essential/msm8998
-TARGET_KERNEL_CONFIG := mata_defconfig
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-elf-
-KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
