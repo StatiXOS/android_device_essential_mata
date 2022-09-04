@@ -740,11 +740,11 @@ vendor/bin/rmt_storage
 vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
-vendor/etc/permissions/qcrilhook.xml
+vendor/etc/permissions/qcrilhook.xml|b179a3e212d0341187f0de947a261f5f37ab768c
 vendor/etc/permissions/radioconfig.xml
 vendor/etc/permissions/radioconfiginterface.xml
 vendor/etc/permissions/telephonyservice.xml
-vendor/framework/qcrilhook.jar
+vendor/framework/qcrilhook.jar|4eece9eb40a8976d2fd9a6a4d5d6dfea0c7674f5
 vendor/lib/libmdmdetect.so
 vendor/lib/libpdmapper.so
 vendor/lib/libpdnotifier.so
