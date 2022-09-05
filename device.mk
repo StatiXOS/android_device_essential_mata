@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+INCLUDE_PIXEL_LAUNCHER := true
+
 # Platform
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := msm8998
