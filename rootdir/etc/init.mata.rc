@@ -343,8 +343,6 @@ on post-fs-data
     write /sys/block/dm-1/queue/read_ahead_kb 2048
 
     start vendor.qcrild
-    start vendor.qti
-    start vendor.netmgrd
     start vendor.wcnss-service
 
     chown system system /sys/devices/soc/soc:fpc,fpc1020/irq
@@ -646,12 +644,6 @@ service vendor.charger /system/bin/charger
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
 
-service vendor.cnd /vendor/bin/cnd
-    class main
-    user system
-    group system wifi inet radio wakelock net_admin
-    writepid /dev/cpuset/system-background/tasks
-
 service vendor.cnss-daemon /vendor/bin/cnss-daemon -n -l
     class late_start
     user system
@@ -682,42 +674,6 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     group system wakelock
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
-    class main
-    user system
-    group radio diag inet log
-    disabled
-    writepid /dev/cpuset/system-background/tasks
-
-service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
-    class main
-    user system
-    socket ims_datad stream 0660 system radio
-    group system wifi radio inet log diag
-    disabled
-    writepid /dev/cpuset/system-background/tasks
-
-service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
-    class main
-    user system
-    socket ims_qmid stream 0660 system radio
-    group radio log diag
-    writepid /dev/cpuset/system-background/tasks
-
-service vendor.imsrcsservice /vendor/bin/imsrcsd
-    class hal
-    user system
-    group radio diag inet log
-    disabled
-    writepid /dev/cpuset/system-background/tasks
-
-on property:vendor.ims.QMI_DAEMON_STATUS=1
-    start vendor.imsdatadaemon
-
-on property:vendor.ims.DATA_DAEMON_STATUS=1
-    start vendor.ims_rtp_daemon
-    start vendor.imsrcsservice
-
 service vendor.ipastart_sh /vendor/bin/init.qcom.ipastart.sh
     class main
     user radio
@@ -745,11 +701,6 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     class core
     user root
     group root
-    writepid /dev/cpuset/system-background/tasks
-
-service vendor.netmgrd /vendor/bin/netmgrd
-    class main
-    disabled
     writepid /dev/cpuset/system-background/tasks
 
 service vendor.pd_mapper /vendor/bin/pd-mapper
@@ -790,13 +741,6 @@ service vendor.qseecomd /vendor/bin/qseecomd
     class core
     user root
     group root
-
-service vendor.qti /vendor/bin/qti
-    class main
-    user radio
-    group radio net_raw diag usb net_admin
-    disabled
-    writepid /dev/cpuset/system-background/tasks
 
 service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
