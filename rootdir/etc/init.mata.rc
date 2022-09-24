@@ -821,10 +821,10 @@ service vendor.thermal-engine /vendor/bin/thermal-engine
    group root
 
 service vendor.time_daemon /vendor/bin/time_daemon
-    class core
-    user root
-    group root
-    writepid /dev/cpuset/system-background/tasks
+    class main
+    user system
+    group system
+    capabilities SYS_TIME
 
 service vendor.tftp_server /vendor/bin/tftp_server
     class core
