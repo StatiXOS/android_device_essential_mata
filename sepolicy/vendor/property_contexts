@@ -128,3 +128,6 @@ rcs.publish.status u:object_r:vendor_radio_prop:s0
 
 # vendor_thermal_prop
 vendor.thermal.                           u:object_r:vendor_thermal_prop:s0
+
+# Timekeep
+persist.vendor.timeadjust              u:object_r:vendor_timekeep_prop:s0

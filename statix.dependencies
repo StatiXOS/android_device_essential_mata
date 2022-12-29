@@ -6,5 +6,11 @@
   {
     "repository": "android_vendor_essential",
     "target_path": "vendor/essential"
+  },
+  {
+    "repository": "LineageOS/android_hardware_sony_timekeep",
+    "target_path": "hardware/sony/timekeep",
+    "revision": "lineage-20",
+    "remote": "github"
   }
 ]
