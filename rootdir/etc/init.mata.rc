@@ -611,12 +611,6 @@ on property:sys.boot_completed=1
 
 # Services begin here
 
-service power_off_alarm /vendor/bin/power_off_alarm
-    class core
-    group system
-    disabled
-    oneshot
-
 service vendor.adsprpcd /vendor/bin/adsprpcd
     class main
     user media
@@ -724,6 +718,12 @@ on property:sys.shutdown.requested=*
 
     # Disable subsystem restart
     write /sys/module/subsystem_restart/parameters/disable_restart_work 0x9889deed
+
+service vendor.power_off_alarm /vendor/bin/power_off_alarm
+    class core
+    group system
+    disabled
+    oneshot
 
 service vendor.qbcharger /charger -m 1
     disabled
