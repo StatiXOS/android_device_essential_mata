@@ -611,6 +611,12 @@ on property:sys.boot_completed=1
 
 # Services begin here
 
+service power_off_alarm /vendor/bin/power_off_alarm
+    class core
+    group system
+    disabled
+    oneshot
+
 service vendor.adsprpcd /vendor/bin/adsprpcd
     class main
     user media
