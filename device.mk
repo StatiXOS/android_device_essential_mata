@@ -443,6 +443,9 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29 30
 PRODUCT_EXTRA_VNDK_VERSIONS := $(PRODUCT_TARGET_VNDK_VERSION)
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v33.so
+
 # Update this list with what each blob is actually for
 # libstdc++: hexagon DSP blobs
 PRODUCT_PACKAGES += \
