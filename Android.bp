@@ -4,3 +4,153 @@ soong_namespace {
         "hardware/qcom/bootctrl",
     ],
 }
+
+// ADSP
+install_symlink {
+    name: "symlink_1cb8f930",
+    installed_location: "rfs/msm/adsp/hlos",
+    symlink_target: "/mnt/vendor/persist/hlos_rfs/shared",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_f976b601",
+    installed_location: "rfs/msm/adsp/readonly/firmware",
+    symlink_target: "/vendor/firmware_mnt",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_8b411e7f",
+    installed_location: "rfs/mdm/adsp/ramdumps",
+    symlink_target: "/data/vendor/tombstones/rfs/lpass",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_bc3aaf81",
+    installed_location: "rfs/msm/adsp/readonly/vendor/firmware",
+    symlink_target: "/vendor/firmware",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_a7d7ca20",
+    installed_location: "rfs/msm/adsp/readwrite",
+    symlink_target: "/mnt/vendor/persist/rfs/msm/adsp",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_f1b311ef",
+    installed_location: "rfs/msm/adsp/shared",
+    symlink_target: "/mnt/vendor/persist/rfs/shared",
+    vendor: true,
+}
+
+// IMS symlinks
+install_symlink {
+    name: "symlink_ims_camera_jni",
+    installed_location: "priv-app/ims/lib/arm64",
+    symlink_target: "/system/lib64/libimscamera_jni.so",
+}
+
+install_symlink {
+    name: "symlink_ims_media_jni",
+    installed_location: "priv-app/ims/lib/arm64",
+    symlink_target: "/system/lib64/libimsmedia_jni.so",
+}
+
+// MPSS
+install_symlink {
+    name: "symlink_ca0daf1d",
+    installed_location: "rfs/msm/mpss/hlos",
+    symlink_target: "/mnt/vendor/persist/hlos_rfs/shared",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_931c6541",
+    installed_location: "rfs/msm/mpss/ramdumps",
+    symlink_target: "/data/vendor/tombstones/rfs/modem",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_d65a340f",
+    installed_location: "rfs/msm/mpss/readonly/firmware",
+    symlink_target: "/vendor/firmware_mnt",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_777af57d",
+    installed_location: "rfs/msm/mpss/readonly/vendor/firmware",
+    symlink_target: "/vendor/firmware",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_97e48589",
+    installed_location: "rfs/msm/mpss/readwrite",
+    symlink_target: "/mnt/vendor/persist/rfs/msm/mpss",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_5d90d83e",
+    installed_location: "rfs/msm/mpss/shared",
+    symlink_target: "/mnt/vendor/persist/rfs/shared",
+    vendor: true,
+}
+
+// SLPI
+install_symlink {
+    name: "symlink_9b79cb37",
+    installed_location: "rfs/msm/slpi/hlos",
+    symlink_target: "/mnt/vendor/persist/hlos_rfs/shared",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_de6780dd",
+    installed_location: "rfs/msm/slpi/ramdumps",
+    symlink_target: "/data/vendor/tombstones/rfs/slpi",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_40e4ada6",
+    installed_location: "rfs/msm/slpi/readonly/firmware",
+    symlink_target: "/vendor/firmware_mnt",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_ad127487",
+    installed_location: "rfs/msm/slpi/readonly/vendor/firmware",
+    symlink_target: "/vendor/firmware",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_fcde208d",
+    installed_location: "rfs/msm/slpi/readwrite",
+    symlink_target: "/mnt/vendor/persist/rfs/msm/slpi",
+    vendor: true,
+}
+
+install_symlink {
+    name: "symlink_2b4baa95",
+    installed_location: "rfs/msm/slpi/shared",
+    symlink_target: "/mnt/vendor/persist/rfs/shared",
+    vendor: true,
+}
+
+// Wi-Fi firmware symlinks
+install_symlink {
+    name: "symlink_wlan_mac",
+    installed_location: "firmware/wlan/qca_cld/wlan_mac.bin",
+    symlink_target: "/mnt/vendor/persist/wlan_mac.bin",
+    vendor: true,
+}

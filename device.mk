@@ -144,10 +144,8 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service \
-    android.hardware.drm@1.1.vendor \
-    android.hardware.drm@1.4-service.clearkey
+    android.hardware.drm@1.2.vendor \
+    android.hardware.drm-service.clearkey
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -361,6 +359,30 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel
 
+# Symlinks
+PRODUCT_PACKAGES += \
+    symlink_1cb8f930 \
+    symlink_f976b601 \
+    symlink_8b411e7f \
+    symlink_bc3aaf81 \
+    symlink_a7d7ca20 \
+    symlink_f1b311ef \
+    symlink_ims_camera_jni \
+    symlink_ims_media_jni \
+    symlink_ca0daf1d \
+    symlink_931c6541 \
+    symlink_d65a340f \
+    symlink_777af57d \
+    symlink_97e48589 \
+    symlink_5d90d83e \
+    symlink_9b79cb37 \
+    symlink_de6780dd \
+    symlink_40e4ada6 \
+    symlink_ad127487 \
+    symlink_fcde208d \
+    symlink_2b4baa95 \
+    symlink_wlan_mac \
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
@@ -416,7 +438,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.2-service.mata
+    vendor.qti.hardware.vibrator.service
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29 30
@@ -434,7 +456,7 @@ PRODUCT_COPY_FILES += \
     device/essential/mata/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service.legacy \
+    android.hardware.wifi.service \
     hostapd \
     WifiOverlay \
     hostapd_cli \
